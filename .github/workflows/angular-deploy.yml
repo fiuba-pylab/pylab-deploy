@@ -17,5 +17,8 @@ jobs:
       - name: Install dependencies
         run: npm install --force
 
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
       - name: Build
-        run: ng serve
+        run: ng build --configuration=production
