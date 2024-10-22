@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pylab_project": {
+    "pylab-deploy": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,7 +16,7 @@
             "loader":{
               ".ttf": "binary"
             },
-            "outputPath": "dist/pylab_project",
+            "outputPath": "dist/pylab-deploy",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pylab_project:build:production"
+              "buildTarget": "pylab-deploy:build:production"
             },
             "development": {
-              "buildTarget": "pylab_project:build:development"
+              "buildTarget": "pylab-deploy:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "pylab_project:build"
+            "buildTarget": "pylab-deploy:build"
           }
         },
         "test": {
