@@ -20,15 +20,13 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build
-        run: ng build --configuration=production
-        
+        run: ng build --configuration=production --base-href /pylab-deploy/
+
       - name: Configure Git
         run: |
           git config --global user.email "${{ secrets.GH_EMAIL }}"
           git config --global user.name "${{ secrets.GH_NAME }}"
-          
       - name: Deploy to GitHub Pages
+        run: npx angular-cli-ghpages --dir=dist/pylab-deploy --no-silent
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          npx angular-cli-ghpages --dir=dist/pylab-deploy --no-silent
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
