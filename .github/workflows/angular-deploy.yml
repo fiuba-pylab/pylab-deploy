@@ -21,8 +21,11 @@ jobs:
 
       - name: Build
         run: ng build --configuration=production --base-href /pylab-deploy/
+      
+      - name: List files
+        run: ls -R dist/pylab-deploy
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/pylab-deploy
+        run: npx angular-cli-ghpages --dir=dist/pylab-deploy --no-silent
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
