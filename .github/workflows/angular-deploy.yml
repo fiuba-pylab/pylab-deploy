@@ -20,14 +20,12 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build
-        run: ng build --configuration=production --base-href /pylab-deploy/
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "${{ secrets.GH_EMAIL }}"
-          git config --global user.name "${{ secrets.GH_NAME }}"
+        run: ng build --configuration=production
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/pylab-deploy --no-silent
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx angular-cli-ghpages --dir=dist/pylab-deploy
+          # Move index.html to root if it's in the 'browser' folder
+          if [ -f dist/pylab-deploy/browser/index.html ]; then
+            mv dist/pylab-deploy/browser/index.html dist/pylab-deploy/index.html
+          fi
