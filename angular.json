@@ -16,7 +16,10 @@
             "loader":{
               ".ttf": "binary"
             },
-            "outputPath": "dist/pylab-deploy",
+            "outputPath": {
+              "base": "dist/pylab-deploy",
+              "browser": ""
+            },
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
