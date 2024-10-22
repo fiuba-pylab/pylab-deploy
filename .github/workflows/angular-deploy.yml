@@ -28,9 +28,7 @@ jobs:
           git config --global user.name "${{ secrets.GH_NAME }}"
           
       - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npx angular-cli-ghpages --dir=dist/pylab-deploy --no-silent
-          # Move index.html to root if it's in the 'browser' folder
-          if [ -f dist/pylab-deploy/browser/index.html ]; then
-            mv dist/pylab-deploy/browser/index.html dist/pylab-deploy/index.html
-          fi
