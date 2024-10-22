@@ -20,12 +20,12 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build
-        run: ng build --configuration=production --base-href /<nombre-repositorio>/
+        run: ng build --configuration=production --base-href /pylab-deploy/
 
       - name: List files
         run: ls -R dist/pylab_project
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/pylab_project
+        run: npx angular-cli-ghpages --dir=dist/pylab-deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
