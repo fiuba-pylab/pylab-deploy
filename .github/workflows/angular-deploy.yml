@@ -24,6 +24,6 @@ jobs:
         run: ng build --configuration=production --base-href /pylab-deploy/
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/<nombre-repositorio>
+        run: npx angular-cli-ghpages --dir=dist/pylab-deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
