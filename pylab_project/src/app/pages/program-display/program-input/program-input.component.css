@@ -1,0 +1,39 @@
+
+
+.x-close {
+    cursor: pointer;
+}
+
+.input-container{
+    padding: 20px;
+    max-height: 30vh;
+    min-height: 30vh;
+    max-width: 40vw;
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--pylab-accent);
+
+}
+
+h2{
+    padding: 0px;
+}

@@ -1,0 +1,15 @@
+numero = int(input('Ingrese un entero positivo mayor a 1 para determinar si es o no es primo: '))
+if numero == 2 or numero == 3:
+    resultado = 'Es primo'
+elif numero % 2 == 0:
+    resultado = 'No es primo (su menor divisor es 2)'
+else:
+    divisor_tope = int(numero  ** 0.5)
+    divisor_posible = 3         
+    while divisor_posible <= divisor_tope and numero % divisor_posible != 0:
+        divisor_posible += 2
+    if divisor_posible > divisor_tope:
+        resultado = 'Es primo'
+    else:
+        resultado = 'No es primo (su menor divisor es {divisor_posible})'
+print(f'{resultado}')

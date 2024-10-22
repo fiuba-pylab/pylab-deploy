@@ -1,0 +1,26 @@
+def suma_cuadrados(num):
+    suma = 0
+    while num != 0:
+        suma += (num % 10)**2
+        num //= 10
+    return suma
+
+def sucesion_feliz(num):
+    sc = suma_cuadrados(num)
+    while sc != 1 and sc not in {4, 16, 37, 58, 89, 145, 42, 20}:
+        sc = suma_cuadrados(sc)
+        print(f'{sc}', end=' ')
+    print(f'<-- {num}', end=' ')
+    if sc == 1:
+        print('es feliz')
+        feliz = True
+    else:
+        print('es triste')
+        feliz = False
+    return feliz
+
+n = int(input('Ingrese un número entero positivo: '))
+sf = sucesion_feliz(n)
+while sf == False:
+  n += 1
+  sf = sucesion_feliz(n)

@@ -1,0 +1,47 @@
+def suma_divisores(numero):
+    suma = 1
+    d = 2
+    tope = int(numero ** 0.5)
+    if numero > 2:
+        while d < tope:
+            if numero % d == 0:
+                otro = numero // d
+                suma += (d + otro)
+            d += 1
+        if numero % d == 0: 
+            otro = numero // d
+            if d != otro: 
+                suma += d + otro
+            else: 
+                suma += d
+    return suma
+
+def alicuota(numero):
+    anterior = numero
+    actual = suma_divisores(anterior)
+    terminos = 2
+    print(f'{anterior}', end=' ')
+    while actual != anterior and actual != numero and actual != 1 and terminos <= 35:
+        print(actual, end=' ') 
+        anterior = actual
+        actual = suma_divisores(anterior)
+        terminos += 1
+    if actual == anterior:
+        if terminos == 2:
+            print('es perfecto (se repite infinitamente)')
+        else:
+            print(f'- {numero} es ambicioso porque {actual} es perfecto ({actual} se repite infinitamente)')
+    elif actual == numero:
+        if terminos > 3:
+            print('- socios (se repiten cíclicamente)')
+        else: 
+            print('- amigos (se repiten cíclicamente)') 
+    elif actual == 1:
+        print(f'{actual} - sucesión finita (penúltimo término primo)') 
+    else: 
+        print('... (se presume infinita)')
+
+natural = int(input('Ingrese número mayor que 1 para ver su sucesión alícuota: '))
+while natural > 1:
+    alicuota(natural)
+    natural=int(input('Ingrese número mayor que 1 para ver su sucesión alícuota, o 0 para finalizar: '))

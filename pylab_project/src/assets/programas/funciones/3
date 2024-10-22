@@ -1,0 +1,20 @@
+def mcm(a, b):
+    if a > b:
+        mayor = a
+        menor = b
+    else:
+        mayor = b
+        menor = a
+    factor = 1
+    dividendo = mayor
+    r = dividendo % menor
+    while r != 0:
+        factor += 1
+        dividendo = mayor * factor
+        r = dividendo % menor
+    return dividendo
+
+n1 = int(input('Primer entero positivo: '))
+n2 = int(input('Segundo entero positivo: '))
+min_com_mult = mcm(n1, n2)
+print(f'\nEl mínimo común múltiplo de {n1} y {n2} es {min_com_mult}')

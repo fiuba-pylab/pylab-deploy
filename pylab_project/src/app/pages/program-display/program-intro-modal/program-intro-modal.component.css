@@ -1,0 +1,39 @@
+.x-close {
+    cursor: pointer;
+}
+
+.header{
+    padding: 20px 20px 0px 20px;
+    color: var(--pylab-accent);
+
+}
+
+.intro-container{
+    padding: 0px 20px 20px 20px;
+    max-height: 50vh;
+    min-height: 50vh;
+    max-width: 60vw;
+    min-width: 60vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.information{
+    overflow: auto;
+    text-align: justify;
+    padding-right: 15px;
+    color: var(--pylab-accent);
+
+}
+
+.header{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2{
+    padding: 0px;
+}

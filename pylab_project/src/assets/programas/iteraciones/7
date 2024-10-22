@@ -1,0 +1,6 @@
+nt_final = int(input('Ingrese hasta qué término quiere ver: '))
+nt = 0
+while nt < nt_final:
+    nt += 1 
+    termino = nt * (nt + 1) // 2
+    print(f'{termino}')

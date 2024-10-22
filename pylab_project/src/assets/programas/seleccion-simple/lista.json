@@ -1,0 +1,101 @@
+[
+    {
+        "id":1,
+        "title":"Zeller",
+        "description": "Se recibe dos strings con números de tipo 053059 representando un horario",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario una fecha expresada en 8 dígitos decimales aaaammdd, e informe el día de semana correspondiente a esa fecha con palabras usando la congruencia de Zeller. <br> <br> <h4>Casos:</h4> 1. Fecha: 20200422: miércoles. <br> 2. Fecha: 20200501: viernes. <br> 3. Fecha: 20200531: domingo. <br> 4. Fecha: 20200630: martes.",
+        "inputs":[
+            {
+                "name":"fecha",
+                "options":[
+                    "20200422",
+                    "20200501",
+                    "20200531",
+                    "20200630"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Clasificación temperatura",
+        "description": "Recibe la temperatura del agua en Fahrenheit, la convierte a Celsius y devuelve el estado.",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicita al usuario que ingrese la temperatura del agua en Farenheit, se convierte a Celsius e imprime por pantalla el estado (sólido, líquido o gaseoso). <br><br> <h4>Casos:</h4> 1. Se ingresa 20: estado sólido. <br> 2. Se ingresa 100: estado líquido. <br> 3. Se ingresa 300: estado gaseoso.",
+        "inputs": [
+            {
+                "name": "temp_fahrenheit",
+                "options": [
+                    "20",
+                    "100",
+                    "300"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Cálculo de una compra con descuento",
+        "description": "Recibe el monto y a partir de ese valor, calcula el descuento a aplicar, devolviendo finalmente el monto con el descuento aplicado.",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicita al usuario el monto de la compra y a partir del mismo, calcula el descuento a aplicar e imprime por pantalla el monto con descuento. <br><br> <h4>Casos:</h4> 1. Monto menor a 50: sin descuento. <br> 2. Monto entre 50 y 100: descuento del 10%. <br> 3. Monto entre 100 y 200: descuento del 20%. <br> 4. Monto mayor a 200: descuento del 30%.",
+        "inputs": [
+            {
+                "name": "monto_compra",
+                "options": [
+                    "20",
+                    "75",
+                    "150",
+                    "250"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Orden de números",
+        "description": "Recibe dos números y los ordena de menor a mayor.",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Solicita al usuario el ingreso de dos números enteros positivos distintos y determina cuál es el número mayor y cuál es el número menor e imprimirlos por pantalla. <br><br> <h4>Casos:</h4> 1. Se ingresa 94 y 37: menor es 37, el mayor es 94. <br> 2. Se ingresa 5 y 98: menor es 5, el mayor es 98.",
+        "inputs": [
+            {
+                "name": "num1",
+                "options": [
+                    "94",
+                    "5"
+                ]
+            },
+            {
+                "name": "num2",
+                "options": [
+                    "37",
+                    "98"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Cálculo de antigüedad laboral",
+        "description": "Recibe la fecha de ingreso de un empleado y calcula la antigüedad en años, meses y días.",
+        "difficulty": 2,
+        "introduction":"<h4>Objetivo:</h4> Solicitar al usuario año y mes de inicio laboral y año y mes para el cual calcular la antigüedad. Calcula años y meses de antigüedad en un trabajo. Se calcula a mesa completo, por lo que se contempla hasta el mes previo al del cálculo final por convención. <br> <br> <h4> Casos: </h4> 1. Mes de inicio menor al mes de cálculo: 1988902 a 202303. <br> 2. Mes de inicio mayor o igual al mes de cálculo: 197810 a 202303.",
+        "inputs": [
+            {
+                "name": "inicio",
+                "options": [
+                    "198902",
+                    "197810"
+                ]
+            },
+            {
+                "name": "fin",
+                "options": [
+                    "202303"
+                ]
+            }
+        ]
+        
+    }
+]

@@ -1,0 +1,114 @@
+#diagram-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.output-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    margin: 10px 10px 0px 10px;
+    overflow: hidden;
+    flex: 0 0 5rem;
+}
+
+.output-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(to right, white, var(--pylab-primary));
+    border-radius: 0 0 20px 20px;
+}
+
+.output-container .title{
+    display: block;
+    width: fit-content;
+    float: right;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 15px;
+    padding: 5px 10px 5px 20px;
+}
+
+.title{
+    font-size: 0.7em;
+    border-radius: 5px;
+    background: var(--pylab-primary);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.variables-container{
+    position: relative;
+    margin: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1
+}
+
+.variables-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(to left, white, var(--pylab-primary));
+    border-radius: 0 0 20px 20px;
+}
+
+.variables-container .title{
+    display: block;
+    float: left;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 15px;
+    padding: 5px 20px 5px 10px;
+    width: fit-content;
+}
+
+.contexts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: auto;
+    margin-top: 10px;
+    max-height: 13rem;
+}
+
+.context {
+    background-color: rgba(var(--pylab-accent-rgb), 0.1); 
+    border-radius: 8px; 
+    padding: 10px;
+    color: var(--pylab-primary);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.context-title {
+    font-weight: bold;
+    font-size: x-small;
+}
+
+.variable {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 3px;
+    margin: 5px 0;
+    color: black;
+    font-size: 15px;
+}
+
+#output{
+    margin: 5px;
+    padding: 5px;
+    word-wrap: break-word;
+    font-size: 0.9em;
+    overflow: auto;
+    max-height: 100%;
+    width: 100%;
+}

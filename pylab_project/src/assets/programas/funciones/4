@@ -1,0 +1,34 @@
+def potencia(b, n):
+    if n == 0: 
+        total = 1.0
+    elif b == 1.0: 
+        total = b
+    elif b == -1.0:
+        if n % 2 == 0: 
+            total = 1.0
+        else: 
+            total = -1.0
+    elif n == 1: 
+        total = b
+    elif n == -1:
+        total = 1/b
+    else:
+        total = 1.0
+        potencias = 0
+        if n > 1:
+            while potencias < n:
+                total *= b
+                potencias += 1
+        else:
+            base_inversa = 1/b
+            while potencias > n:
+                total *= base_inversa
+                potencias -= 1
+    return total
+
+base = float(input('Ingrese la base de la potencia a calcular: '))
+while base != 0.0:
+    exponente = int(input('Ingrese exponente entero: '))
+    resultado = potencia(base, exponente)
+    print(f'El resultado es {resultado}')
+    base = float(input('Ingrese la base de la potencia a calcular o 0 para terminar: '))

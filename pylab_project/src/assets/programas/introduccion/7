@@ -1,0 +1,19 @@
+dia = int(input('Ingrese el número del día de la fecha: '))
+mes = int(input('Ingrese el número del mes de la fecha: '))
+anio = int(input('Ingrese el año de la fecha: '))
+horas = int(input('Ingrese hora entre 0 y 23: '))
+minutos = int(input('Ingrese minutos: '))
+segundos = int(input('Ingrese segundos: '))
+
+tiempo = anio * 10000 + mes * 100 + dia + horas / 24 + minutos / (24 * 60) + segundos / (24 * 60 ** 2)
+
+print(f'La fecha y hora expresadas como un único número fraccionario es {tiempo}')
+
+hora = tiempo - int(tiempo) 
+horas = int(hora * 24)
+horas = hora * 24 - horas
+minutos = int(horas * 60)
+minutos = horas * 60 - minutos
+segundos = round(minutos * 60)
+
+print(f'{tiempo} equivale a {horas}hs {minutos}min {segundos}seg')

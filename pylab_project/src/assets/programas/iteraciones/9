@@ -1,0 +1,13 @@
+a = int(input('Ingrese el primer número, mayor que 1: '))
+b = int(input('Ingrese el segundo número, mayor o igual que el primero: '))
+
+x = a
+while x <= b:
+    tope = int(x**0.5) 
+    posible_divisor = 2 
+    while x % posible_divisor != 0 and posible_divisor <= tope:
+        posible_divisor += 1
+    
+    if posible_divisor > tope: 
+        print(f'{x} es primo')     
+    x += 1

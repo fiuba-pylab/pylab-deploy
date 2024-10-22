@@ -1,0 +1,63 @@
+.general-container {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-self: center;
+  align-items: baseline;
+  gap: 10px;
+}
+
+#editor-container {
+  height: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  position: relative;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 0px;
+  margin: 3px;
+  height: 24px !important;
+  width: 24px  !important;
+
+  &.disabled {
+    cursor: not-allowed;
+    color: rgba(var(--pylab-accent-rgb), 0.6);
+  }
+}
+
+.execution-info{
+  position: absolute;
+  right: 0;
+
+  &.finished{
+    color: var(--pylab-success);
+  }
+
+  &.executing{
+    color: rgba(var(--pylab-accent-rgb), 0.5);
+  }
+}
+
+.velocity-button{
+  max-height: 24px;
+}
+
+.mat-mdc-menu-item{
+  min-height: 31px !important;
+}

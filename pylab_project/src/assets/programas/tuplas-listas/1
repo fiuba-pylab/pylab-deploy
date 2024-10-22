@@ -1,0 +1,16 @@
+lista_numeros = [input("ingrese la lista de números:")]
+tamanio = len(lista_numeros)
+sum = 0
+for element in lista_numeros:
+    element_number = int(element)
+    sum += element_number
+promedio = sum/tamanio
+
+cantidad_menores = 0
+for element in lista_numeros:
+    if element < promedio:
+        cantidad_menores += 1
+
+print(f'promedio : {promedio}')
+print(f'tamanio : {tamanio}')
+print(f'cantidad numeros menores : {cantidad_menores}')

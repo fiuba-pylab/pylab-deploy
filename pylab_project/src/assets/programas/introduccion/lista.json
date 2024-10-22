@@ -1,0 +1,175 @@
+[
+    {
+        "id":1,
+        "title":"Raíces - ecuación cuadrática",
+        "description": "Ejemplo de programa con todos los atributos",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Solitar al usuario los coeficientes de una ecuación cuadrática a, b, c, tales que ax<sup>2</sup>+bx+c = 0 e informar el valor de las raíces.<br><br> <h4>Casos:</h4> Sea b<sup>2</sup>-4ac el determinante para el cálculo de soluciones:<br> 1. Determinante positivo: dos soluciones reales.<br> 2. Determinante nulo: raiz real doble.<br> 3. Determinante negativo: dos soluciones complejas (conjugadas).",
+        "inputs":[
+            {
+                "name":"cadena_a",
+                "options":[
+                    "2.0",
+                    "4.5"
+                ]
+            },
+            {
+                "name":"cadena_b",
+                "options":[
+                    "8.0",
+                    "6.2"
+                ]
+            },
+            {
+                "name":"cadena_c",
+                "options":[
+                    "8.0",
+                    "5.0"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Teorema Pitágoras",
+        "description": "Variables y tipos de datos en Python",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario valores de dos catetos de un triángulo, e informar el valor de la hipotenusa. <br> <br> <h4> Casos:</h4> 1. Básico: catetos con valores 3 y 4. <br> 2. Un cateto con valor 0. <br> 3. Catetos con valores decimales 6,3 y 2,7. <br> 4. Catetos iguales con valor 5 (isósceles). <br> 5. Catetos con valores grandes 300 y 400.",
+        "inputs":[
+            {
+                "name": "cateto1",
+                "options": [
+                    "3",
+                    "0",
+                    "6.3",
+                    "5",
+                    "300"
+                ]
+            },
+            {
+                "name": "cateto2",
+                "options": [
+                    "4",
+                    "0",
+                    "2.7",
+                    "5",
+                    "400"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Ecuación matemática",
+        "description": "Operadores aritméticos, lógicos y de comparación en Python",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario los valores a, b y c para resolver la siguiente ecuación matemática: <img src=\"assets/intro-3-func.png\"></img> <br> <br> <h4>Casos:</h4> Todas las combinaciones de los valores 2.5 y -5.2 para a, 4.8 y 3.3 para b y 100 y 1000 para c <br>",
+        "inputs": [
+            {
+                "name": "a",
+                "options": [
+                    "3.5",
+                    "-5.2"
+                ]
+            },
+            {
+                "name": "b",
+                "options": [
+                    "4.8",
+                    "3.3"
+                    
+                ]
+            },
+            {
+                "name": "c",
+                "options": [
+                    "100",
+                    "1000"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "División",
+        "description": "Operadores aritméticos, lógicos y de comparación en Python",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario dos números enteros, dividir un número entero por otro y comunicar el resultado real, la división entera y el resto de la división. <br><br> <h4>Casos:</h4> 1. Dividendo 0, divisor 7: resultado 0, división entera 0, resto 0. <br> 2. Dividendo 2, divisor 3: resultado 0.6666, división entera 0, resto 2. <br> 3. Dividendo 3, divisor 2: resultado 1.5, división entera 1, resto 1. <br> 4. Dividendo 8, divisor 4: resultado 2, división entera 2, resto 0.",
+        "inputs": [
+            {
+                "name": "dividendo",
+                "options": [
+                    "0",
+                    "2",
+                    "3",
+                    "8"
+                ]
+            },
+            {
+                "name": "divisor",
+                "options": [
+                    "7",
+                    "3",
+                    "2",
+                    "4"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Fechas",
+        "description": "Transformar fechas",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario una fecha pidiendo por separado día, mes y año, y luego informar la fecha como un número entero con formato aaaammdd. <br> <br> <h4>Casos:</h4> 1. Fecha 1/1/2000: 20000101. <br> 2. Fecha 31/12/2020: 20201231. <br> 3. Fecha 22/8/2022: 20220822. <br> 4. Fecha 31/12/2021: 20211231. <br> 5. Fecha 2/4/1996: 19960402.",
+        "inputs": [
+            {
+                "name": "dia",
+                "options": [
+                    "1",
+                    "31",
+                    "22",
+                    "2"
+                ]
+            },
+            {
+                "name": "mes",
+                "options": [
+                    "1",
+                    "12",
+                    "8",
+                    "12",
+                    "4"
+                ]
+            },
+            {
+                "name": "anio",
+                "options": [
+                    "2000",
+                    "2020",
+                    "2022",
+                    "2021",
+                    "1996"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Horas",
+        "description": "Transformar horas",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario una hora en formato hhmmss (6 dígitos decimales), y mostrar su equivalente como número decimal (real). <br> <br> <h4>Casos:</h4> 1. 091500 <br> 2. 130031 <br> 3. 235959 <br> 4. 184015",
+        "inputs": [
+            {
+                "name": "thora",
+                "options": [
+                    "091500",
+                    "130031",
+                    "235959",
+                    "184015"
+                ]
+            }
+        ]
+    }
+]

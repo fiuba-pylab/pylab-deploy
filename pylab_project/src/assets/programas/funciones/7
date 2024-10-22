@@ -1,0 +1,19 @@
+def exp(x):
+    potencia = 1.0
+    factorial = 1
+    termino = 1.0 
+    nt = 0
+    serie = termino
+    while abs(termino)>1e-12:
+        potencia *= x
+        nt += 1
+        factorial *= nt
+        termino = potencia/factorial
+        serie += termino
+    print(f'Se calcularon secuencialmente {nt+1} términos')
+    return serie
+x = float(input('\nIngrese valor de x para obtener e^x: '))
+while x != 0.0:
+    exponencial = exp(x)
+    print(f'{exponencial}')
+    x = float(input('\n\nIngrese valor de x para obtener e^x o 0 para terminar: '))

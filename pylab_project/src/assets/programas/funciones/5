@@ -1,0 +1,19 @@
+def malabarista(origen):
+    termino = origen
+    contador = 1
+    mayor = termino
+    while termino != 1:
+        if termino % 2 != 0: 
+           termino = int(termino **1.5)
+        else:
+           termino = int(termino **0.5)
+        contador += 1
+        if termino > mayor: 
+           mayor = termino 
+    return  contador, mayor
+
+numero = int(input('Ingrese un número entero positivo: '))
+while numero != 0:
+    cantidad, maximo = malabarista(numero)
+    print(f'La sucesión tiene {cantidad} términos, y el más alto es {maximo}')
+    numero = int(input('Ingrese un número entero positivo o 0 para terminar: '))

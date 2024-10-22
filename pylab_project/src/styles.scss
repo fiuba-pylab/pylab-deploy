@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.selected-line{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.dropDown-seasons-panel {
+    border-radius: 10px !important;
+    border: 1px solid gray !important;
+    position: absolute !important;
+    top: 10px !important;
+}
+
+button:hover { 
+    cursor: pointer;
+}
+
+/* For Firefox */
+@supports (-moz-appearance:none) {
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: #999595 #DFE9EB;
+	}
+}
+
+/* For WebKit-based browsers (Chrome, Safari, newer versions of Edge) */
+@supports (-webkit-appearance:none) {
+	*::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background-color: #DFE9EB;
+	}
+
+	*::-webkit-scrollbar-track:hover {
+		background-color: #B8C0C2;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: #999595;
+	}
+
+	*::-webkit-scrollbar-thumb:hover {
+		background-color: #3F3F3F;
+	}
+
+	*::-webkit-scrollbar-thumb:active {
+		background-color: #3E3B3B;
+	}
+}

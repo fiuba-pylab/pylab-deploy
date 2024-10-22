@@ -1,0 +1,7 @@
+.mat-spinner-color::ng-deep circle{
+    stroke: var(--primary-color) !important;
+}
+
+#spinner{
+    margin: 5rem auto;
+}

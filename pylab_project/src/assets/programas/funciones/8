@@ -1,0 +1,24 @@
+def fact(n): 
+    if n==0 or n==1: 
+        return 1 
+    else: 
+        factorial = fact(n-1)
+        return n*factorial
+
+def exp(x, nt=0):  
+    factorial = fact(nt)
+    termino = x**nt / factorial
+    abs_ter = abs(termino)
+    if abs_ter > 1e-12: 
+        exponencial = exp(x, nt+1)
+        return exponencial + termino 
+    else:
+        cant_t = nt + 1 
+        print(f'\nSe calcularon recursivamente {cant_t} términos para obtener')
+        return termino
+    
+x = float(input('\nIngrese valor de x para obtener e^x: '))
+while x != 0.0:
+    exponencial = exp(x)
+    print(f'{exponencial}')
+    x = float(input('\n\nIngrese valor de x para obtener e^x o 0 para terminar: '))

@@ -1,0 +1,7 @@
+dia = int(input('Ingrese el día de la fecha: '))
+mes = int(input('Ingrese el mes de la fecha: '))
+anio = int(input('Ingrese el año de la fecha: '))
+
+fecha = anio * 10000 + mes * 100 + dia
+
+print(f'\nLa fecha expresada como un único número entero es {fecha}')

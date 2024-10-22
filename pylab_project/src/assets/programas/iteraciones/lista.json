@@ -1,0 +1,197 @@
+[
+    {
+        "id": 1,
+        "title": "Decimal a binario",
+        "description": "Recibe un número decimal y lo convierte a binario.",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Convierte a binario un número decimal elegido por el usuario <h4>Casos:</h4> 3, 11, 19, 32",
+        "inputs":[
+            {
+                "name":"n",
+                "options":[
+                    "3",
+                    "11",
+                    "19",
+                    "32"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Números felices",
+        "description": "Números felices",
+        "difficulty": 4,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número positivo mayor a 1 y buscar el primer número feliz a partir del mismo. Un número es feliz si la sucesión que lo tiene como origen en la que cada término es igual a la suma de cuadrados de las cifras del término anterior llega a un término igual a 1. Si la sucesión no llega a 1, siempre llega a un término que inicia un período de 8, a partir de cualquiera de los valores 4, 16, 37, 58, 89, 145, 42 o 20, en cuyo caso el número origen se dice infeliz o triste. <br> <br> <h4>Casos:</h4> 1. 7 es feliz. <br> 2. 9 no es feliz. <br> 3. 19 es feliz. <br> 4. 23 es feliz. <br> 5. 4 no es feliz.",
+        "inputs": [
+            {
+                "name": "n",
+                "options": [
+                    "7",
+                    "9",
+                    "19",
+                    "23",
+                    "4"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Fibonacci",
+        "description": "Recibe un número entero y devuelve el número de la serie de Fibonacci correspondiente.",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Muestra en pantalla los términos de la sucesión de Fibonacci hasta igualar o superar un valor tope especificado por el usuario. <br> La sucesión de Fibonacci es: F(0)=0 <br> F(1)=1 <br> F(n)=F(n-2)+F(n-1). <br> <br> <h4>Casos:</h4> 1. tope = 0 <br> 2. tope = 5 <br> 3. tope = 10 <br> 4. tope = 25",
+        "inputs": [
+            {
+                "name": "tope",
+                "options": [
+                    "0",
+                    "5",
+                    "10",
+                    "25"
+                ]
+            }
+        ]
+
+    },
+    {
+        "id": 4, 
+        "title": "Números malabaristas",
+        "description": "Dado un número entero positivo e imprime en una línea de la pantalla la sucesión malabarista que lo tiene como origen:\n - si un número es par, el siguiente es la parte entera de su raíz cuadrada\n - si es impar, la parte entera de la raíz cuadrada de su cubo",
+        "difficulty": 4,
+        "introduction": "<h4>Objetivo:</h4> Solicita al usuario un número entero positivo e imprime por pantalla la sucesión malabarista que lo tiene como origen. <br> Si un número es par, el siguiente es la parte entera de su raíz cuadrada. <br> Si es impar, la parte entera de la raíz cuadrada de su cubo. <br> <br> <h4>Casos:</h4> 1. n = 1 <br> 2. n = 3 <br> 3. n = 10 <br> 4. n = 20",
+        "inputs": [
+            {
+                "name": "num",
+                "options": [
+                    "1",
+                    "3",
+                    "10",
+                    "20"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Factorial",
+        "description": "Recibe un número entero y devuelve el factorial del mismo.",
+        "difficulty": 5,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número entero mayor o igual a 0 y se imprime su factorial n!: <ul> <li> 0! = 1</li> <li> 1! = 1 </li> <li> n! = 1*2*3*...*(n-1)*n </li></ul> <br> <h4> Casos:</h4> 1. n = 0 <br> 2. n = 5 <br> 3. n = 10 <br> 4. n = 20",
+        "inputs": [
+            {
+                "name": "n",
+                "options": [
+                    "0",
+                    "5",
+                    "10",
+                    "20"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Factorización",
+        "description": "Recibe un número entero y devuelve su factorización en números primos.",
+        "difficulty": 4,
+        "introduction": "<h4>Objetivo:</h4> Solicita al usuario un número entero positivo mayor que 1 a factorizar. <br> El teorema fundamental de la aritmética o teorema de factorización única afirma que todo entero positivo mayor que 1 es un número primo o bien un único producto de números primos. Como la multiplicación es conmutativa, el orden de los factores es irrelevante, por esta razón, usualmente se enuncia el teorema como factorización única salvo en el orden de los factores. <br> <br> <h4>Casos:</h4> 1. n = 16 (factorización 2 2 2 2) <br> 2. n = 12 (factorización 2 2 3). <br> 3. n = 35 (factorización 5 7). <br> 4. n = 100 (factorización 2 2 2 5 5)",
+        "inputs": [
+            {
+                "name": "numero",
+                "options": [
+                    "16",
+                    "12",
+                    "35",
+                    "100"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Triangulares",
+        "description": "Recibe un número entero y devuelve el número triangular correspondiente.",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número y muestra la sucesión de números triangulares hasta ese número, usando fórmula triangular. <br> <br> <h4>Casos:</h4> 1. n = 0 <br> 2. n = 5 <br> 3. n = 10 <br> 4. n = 20",
+        "inputs": [
+            {
+                "name": "nt_final",
+                "options": [
+                    "0",
+                    "5",
+                    "10",
+                    "20"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Primalidad",
+        "description": "Recibe un número entero y devuelve si es primo o no.",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número entero positivo mayor que 1 y determinar si es primo o no. <br> Un número primo es aquel que solo es divisible por 1 y por sí mismo. <br> <br> <h4>Casos:</h4> 1. 2 es primo. <br> 2. 4 no es primo. <br> 3. 19 es primo. <br> 4. 10 no es primo. <br> 5. 25 no es primo.",
+        "inputs": [
+            {
+                "name": "numero",
+                "options": [
+                    "2",
+                    "4",
+                    "19",
+                    "10",
+                    "25"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Primos",
+        "description": "Recibe un número entero y devuelve los números primos menores",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario dos números naturales tales que a > 1 y a <= b, y mostrar por pantalla los números primos entre a y b. <br> Estrategia de búsqueda de divisores para detectar si un número es primo: si no se encuentra un divisor menor o igual a la parte entera de su raíz cuadrada, entonces el número es primo. Se prueban posibles divisores comenzando por 2 y siguiendo con los enteros sucesores mientras no se encuentre uno que sea divisor (el resto de dividir al número por el posible divisor sea cero) y además sea menor o igual a la parte entera de su raiz cuadrada. <br> <br> <h4>Casos:</h4> 1. a = 2, b = 10 <br> 2. a = 10, b = 20 <br> 3. a = 20, b = 30 <br> 4. a = 30, b = 40",
+        "inputs": [
+            {
+                "name": "a",
+                "options": [
+                    "2",
+                    "10",
+                    "20",
+                    "30"
+                ]
+            },
+            {
+                "name": "b",
+                "options": [
+                    "10",
+                    "20",
+                    "30",
+                    "40"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Suma cuadrados",
+        "description": "Recibe un número entero y devuelve la suma de los cuadrados de los números menores o iguales al mismo.",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número entero positivo y mostrar la suma de cuadrados de sus dígitos. <br> <br> <h4>Casos:</h4> 1. n = 11 <br> 2. n = 5 <br> 3. n = 1 <br> 4. n = 18 <br> 5. n = 27 <br> 6. n = 32 <br> 7. n = 104",
+        "inputs": [
+            {
+                "name": "n",
+                "options": [
+                    "11",
+                    "5",
+                    "1",
+                    "18",
+                    "27",
+                    "32",
+                    "104"
+                ]
+            }
+        ]
+    }
+]

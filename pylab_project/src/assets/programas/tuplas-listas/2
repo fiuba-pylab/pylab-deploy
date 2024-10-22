@@ -1,0 +1,23 @@
+
+
+poli1 = [input("Seleccione el primer polinomio:")]
+poli2 = [input("Seleccione el segundo polinomio:")]
+
+resultado = []
+
+for index1 in range(poli1):
+    for index2 in range(poli2):
+        value1 = poli1[index1]
+        value2 = poli2[index2]
+        total_values = value1 * value2
+        element_result = resultado[index1 + index2]
+        if element_result is None:
+            resultado[index1 + index2] = total_values
+        else:
+            element_result += total_values
+            resultado[index1 + index2] = element_result
+            aux2 = resultado[index1 + index2]      
+    
+
+for aux in resultado:
+    print(f"{aux}")

@@ -1,0 +1,268 @@
+[
+    {
+        "id": 1,
+        "title": "Calculadora",
+        "description": "calculadora básica",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivos:</h4> <br> <h5>Del programa:</h5>Proveer al usuario la posibilidad de realizar operaciones de multiplicación o división con números naturales. <br> <br> <h5>De las funciones:</h5> &bull; Función producto: resuelve el producto de nat1 por nat2 con sumas sucesivas. <br> &bull; Función divresto: resuelve la división entera de dividendo con divisor usando restas sucesivas y devuelve el cociente y el resto o módulo de la división. <br> <br> <h4> Casos: </h4> ",
+        "inputs": [
+            {
+                "name": "operador",
+                "options": [
+                    "*",
+                    "/",
+                    "?"
+                ]
+            },
+            {
+                "name": "a",
+                "options": [
+                    "3",
+                    "5",
+                    "10",
+                    "7",
+                    "0"
+                ]
+            },
+            {
+                "name": "b",
+                "options": [
+                    "2",
+                    "3",
+                    "5",
+                    "0",
+                    "7"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Números primos",
+        "description": "Números primos",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número y determinar si es primo o no. Para ver si un número es primo, se buscan divisores menores o iguales a la parte entera de su raíz cuadrada, y si no se encuentra ninguno es porque el número es primo (corolario del Teorema Fundamental de la Aritmética) <br> <br> <h4>Casos:</h4> 1. 2 es primo. <br> 2. 3 es primo. <br> 3. 4 no es primo. <br> 4. 57 no es primo. <br> 5. 97 es primo.",
+        "inputs": [
+            {
+                "name": "numero",
+                "options": [
+                    "2",
+                    "3",
+                    "4",
+                    "57",
+                    "97"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Mínimo común múltiplo",
+        "description": "Mínimo común múltiplo",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivos:</h4> <br> <h5>Del programa:</h5> Solicitar al usuario una dos números enteros y calcular el mínimo común múltiplo de ellos. <br> <br> <h5>De la función mcm:</h5> Devuelve el mínimo común múltiplo de a y b. Para hallar el mínimo común múltiplo (mcm) de los números se deberá dividir los sucesivos múltiplos del número mayor (dividendo) por el número menor (divisor) hasta obtener un resto igual a cero. El último valor del dividendo será el mínimo común múltiplo mcm. Los sucesivos múltiplos del número mayor se obtienen multiplicando el número mayor por 1, luego por 2, por 3 y así sucesivamente. <br> <br> <h4>Casos:</h4> 1. mcm(2, 3) = 6 <br> 2. mcm(3, 5) = 15 <br> 3. mcm(4, 6) = 12 <br> 4. mcm(6, 8) = 24 <br> 5. mcm(8, 12) = 24",
+        "inputs": [
+            {
+                "name": "n1",
+                "options": [
+                    "2",
+                    "3",
+                    "4",
+                    "6",
+                    "8"
+                ]
+            },
+            {
+                "name": "n2",
+                "options": [
+                    "3",
+                    "5",
+                    "6",
+                    "8",
+                    "12"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Potencias",
+        "description": "Potencias",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivos:</h4> <br> <h5>Del programa:</h5> Calcular una secuencia de potencias con exponente entero no negativo de cualquier número en punto flotante, cada una como una secuencia de productos, mientras no se ingrese 0 como base de la potencia. <br> <br> <h5>De la función potencia:</h5> Calcula la potencia en forma recurrente reexpresándola como productos, y devuelve el resultado. <br> <br> <h4>Casos:</h4> 1. 2<sup>3</sup> = 8 <br> 2. Cualquier número elevado a 0 = 1. <br> 3. 4<sup>5</sup> = 1024 <br> 4. Cualquier número elevado a 1 = el número. <br> 5. (-0,5)<sup>-1</sup> = -2. <br> 6. (-0,5)<sup>2</sup> = 0,25. <br> 7. (-0,5)<sup>-2</sup> = 0. <br> 8. (-0,5)<sup>-3</sup> = -8.",
+        "inputs": [
+            {
+                "name": "base",
+                "options": [
+                    "2",
+                    "0",
+                    "4",
+                    "1",
+                    "-0,5"
+                ]
+            },
+            {
+                "name": "exponente",
+                "options": [
+                    "3",
+                    "0",
+                    "5",
+                    "1",
+                    "-1",
+                    "2",
+                    "-2",
+                    "-3"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Números malabaristas",
+        "description": "Números malabaristas",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario números enteros positivos, y calcula la sucesión malabarista con esos números como origen. Para terminar, el usuario debe ingresar un 0. De cada sucesión, informa la cantidad de términos y el valor del más alto. Cada término de la sucesión es la parte entera de la raiz cuadrada del previo, si el previo es par, o la parte entera de la raíz cuadrada del cubo del término previo, en caso contrario. <br> <br> <h4>Casos:</h4> 1. 173 <br> 2. 14 <br> 3. 10 <br> 4. 78",
+        "inputs": [
+            {
+                "name": "numero",
+                "options": [
+                    "173",
+                    "14",
+                    "10",
+                    "78",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6, 
+        "title": "Números felices",
+        "description": "Números felices",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivos:</h4><br> <h5>Del programa:</h5> Solicitar al usuario un número entero positivo y muestra en pantalla, en una misma línea, al número seguido de su secuencia de sumas de cuadrados e indica al final de ésta si se trata de un número feliz o triste, y en caso de que sea triste, hace lo mismo con tantos sucesores cuantos sean necesarios hasta encontrar uno que sea feliz. <br> <br> <h5>De las funciones: </h5> &bull; Función suma_cuadrados:  Devuelve la suma de cuadrados de los dígitos de num. <br> &bull; Función sucesion_feliz: Muestra la sucesión parcial de sumas de cuadrados de num y devuelve si es feliz o no. <br> <br> <h4>Casos:</h4> 1. 7 es feliz. <br> 2. 9 es no es feliz. El siguiente feliz es 10. <br> 3. 19 es feliz. <br> 4. 23 es feliz. <br> 5. 4 no es feliz. EL siguiente feliz es 7.",
+        "inputs": [
+            {
+                "name": "n",
+                "options": [
+                    "7",
+                    "9",
+                    "19",
+                    "23",
+                    "4"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Exponencial secuencial",
+        "description": "Exponencial secuencial",
+        "difficulty": 4,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número y calcular valores de la función exponencial para ese número, de forma secuencial por serie de Maclaurin. Se suman términos de la serie de Maclaurin mientras sus valores absolutos sean mayores que 10<sup>(-12)</sup>, es decir, mientras afecten al resultado hasta el duodécimo dígito significativo. <br> <br> <h4>Casos:</h4> 1. 1 = 2,718281828459 <br> 2. 0,5 = 1,648721270700. <br> 3. 0,2 = 1,221402758160 <br> 4. 0,1 = 1,105170918076 <br> 5. -0,1 = 0,904837418036 <br> 6. -0,2 = 0,818730753078 <br> 7. 2 = 7,389056098930",
+        "inputs": [
+            {
+                "name": "x",
+                "options": [
+                    "0",
+                    "1",
+                    "0.5",
+                    "0.2",
+                    "0.1",
+                    "-0.1",
+                    "-0.2",
+                    "2"
+                ]
+            }
+        ] 
+    },
+    {
+        "id": 8,
+        "title": "Exponencial recursiva",
+        "description": "Exponencial recursiva",
+        "difficulty": 5,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número y calcular valores de la función exponencial para ese número, de forma recursiva. Se calcula la exponencial de x sumando términos de la serie de Maclaurin mientras sus valores absolutos sean mayores que 10<sup>(-12)</sup>, es decir, mientras afecten al resultado hasta el duodécimo dígito significativo. <br> <br> <h4>Casos:</h4> 1. 1 = 2,718281828459 <br> 2. 0,5 = 1,648721270700. <br> 3. 0,2 = 1,221402758160 <br> 4. 0,1 = 1,105170918076 <br> 5. -0,1 = 0,904837418036 <br> 6. -0,2 = 0,818730753078 <br> 7. 2 = 7,389056098930",
+        "inputs": [
+            {
+                "name": "x",
+                "options": [
+                    "0",
+                    "1",
+                    "0.5",
+                    "0.2",
+                    "0.1",
+                    "-0.1",
+                    "-0.2",
+                    "2"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Exponencial recursiva 2 (optimizada)",
+        "description": "Exponencial recursiva 2 (optimizada)",
+        "difficulty": 5,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número y calcular valores de la función exponencial para ese número, de forma recursiva optimizada por serie de Maclaurin b<sup>x</sup> = (b<sup>x/2</sup> * b<sup>x/2</sup>). <br> <br> <h4>Casos:</h4> 1. 1 = 2,718281828459 <br> 2. 0,5 = 1,648721270700. <br> 3. 0,2 = 1,221402758160 <br> 4. 0,1 = 1,105170918076 <br> 5. -0,1 = 0,904837418036 <br> 6. -0,2 = 0,818730753078 <br> 7. 2 = 7,389056098930",
+        "inputs": [
+            {
+                "name": "x",
+                "options": [
+                    "0",
+                    "1",
+                    "0.5",
+                    "0.2",
+                    "0.1",
+                    "-0.1",
+                    "-0.2",
+                    "2"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Sucesiones Alícuotas",
+        "description": "Sucesiones Alícuotas",
+        "difficulty": 5,
+        "introduction": "<h4>Objetivos:</h4> <br> <h5>Del programa:</h5> Solicitar al usuario números naturales mayores que 1 hasta que ingrese 0, para cada número (excepto para el 0) imprimir su sucesión alícuota, y, según el último término calculado de la sucesión, imprimir qué tipo de sucesión es. <br> <br> <h5>De las funciones:</h5> &bull; Función suma_divisores: Devuelve la suma de divisores propios del número. <br> &bull; Función alicuota: Muestra número como origen de su sucesión alícuota y los términos de esta sucesión, y al final clasifica número o aclara si la sucesión termina en 1 o si se corta por tener más de 28 términos abundantes. <br> <br> <h4>Casos: </h4> 1. 496 es perfecto. <br> 2. 220 284 son amigos <br> 3. 12496 14288 15472 14536 14264 son socios <br> 4. 95 25 6 - 95 es ambicioso. <br> 5. 4274 2140 2396 1804 1724 1300 1738 1142 574 434 334 170 154 134 70 74 40 50 43 1 es finita. <br> 6. Más de 28 términos se presume infinita.",
+        "inputs":[
+            {
+                "name": "natural",
+                "options": [
+                    "496",
+                    "220",
+                    "284",
+                    "12496",
+                    "14288",
+                    "15472",
+                    "14536",
+                    "14264",
+                    "95",
+                    "25",
+                    "6",
+                    "4274",
+                    "2140",
+                    "2396",
+                    "1804",
+                    "1724",
+                    "1300",
+                    "1738",
+                    "1142",
+                    "574",
+                    "434",
+                    "334",
+                    "170",
+                    "154",
+                    "134",
+                    "70",
+                    "74",
+                    "40",
+                    "50",
+                    "43",
+                    "0"
+                ]
+            }
+        ]
+    }
+]

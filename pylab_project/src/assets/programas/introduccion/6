@@ -1,0 +1,9 @@
+thora = int(input('Ingrese una hora expresada con 6 dígitos decimales: '))
+
+hora = thora // 10000 
+mins = (thora // 100) % 100  
+segs = thora % 100 
+
+rh = hora + mins / 60 + segs / 3600
+
+print(f'La hora expresada como número decimal es {rh}')
