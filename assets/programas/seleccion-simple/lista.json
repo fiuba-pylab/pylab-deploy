@@ -1,5 +1,23 @@
 [
     {
+        "id":1,
+        "title":"Zeller",
+        "description": "Se recibe dos strings con números de tipo 053059 representando un horario",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario una fecha expresada en 8 dígitos decimales aaaammdd, e informe el día de semana correspondiente a esa fecha con palabras usando la congruencia de Zeller. <br> <br> <h4>Casos:</h4> 1. Fecha: 20200422: miércoles. <br> 2. Fecha: 20200501: viernes. <br> 3. Fecha: 20200531: domingo. <br> 4. Fecha: 20200630: martes.",
+        "inputs":[
+            {
+                "name":"fecha",
+                "options":[
+                    "20200422",
+                    "20200501",
+                    "20200531",
+                    "20200630"
+                ]
+            }
+        ]
+    },
+    {
         "id": 2,
         "title": "Clasificación temperatura",
         "description": "Recibe la temperatura del agua en Fahrenheit, la convierte a Celsius y devuelve el estado.",

@@ -1,0 +1,12 @@
+
+n = input("Seleccione un número natural")
+iterator = 0
+multiples = []
+limit = 0
+
+while iterator < n:
+    iterator += 1
+    if n % iterator == 0:
+        multiples.append(iterator)
+
+print(f'{multiples}')
