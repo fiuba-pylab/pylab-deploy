@@ -10,14 +10,14 @@ export abstract class Structure{
     codeService: CodeService | null;
     variablesService: VariablesService | null;
     context: Context;
-    collectionInfo?:any
+    collectionInfo?:any;
     constructor(level: number, condition: string, codeService: CodeService | null, variablesService: VariablesService | null, context: Context, collectionInfo?:any){
         this.level = level;
         this.condition = condition;
         this.codeService = codeService;
         this.variablesService = variablesService;
         this.context = context;
-        this.collectionInfo = collectionInfo
+        this.collectionInfo = collectionInfo;
     }
     abstract setScope(code: any): void;
 

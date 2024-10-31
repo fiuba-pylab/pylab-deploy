@@ -4,7 +4,7 @@
         "title":"Promedio",
         "description": "Solicitar al usuario una lista de números y se calcular el promedio",
         "difficulty": 1,
-        "introduction": "<h4>Objetivo:</h4>Dado una lista de números por el usuario, se calcula la media aritmética entre ellos.<h4>Casos:</h4>1. [1, 2, 3, 4, 5, 6] <br> 2. [10, 12, 30, 54, 87, 91] <br> 3. [50, 50, 50, 50, 50, 1]",
+        "introduction": "<h4>Objetivo:</h4>Dado una lista de números por el usuario, se calcula la media aritmética entre ellos.<br> <br><h4>Casos:</h4>1. [1, 2, 3, 4, 5, 6] <br> 2. [10, 12, 30, 54, 87, 91] <br> 3. [50, 50, 50, 50, 50, 1]",
         "inputs":[
             {
                 "name":"lista_numeros",
@@ -21,7 +21,7 @@
         "title":"Multiplicación de polinomios",
         "description": "Solicitar al usuario dos polinomios y realizar la multiplicación de los mismos",
         "difficulty": 3,
-        "introduction": "<h4>Objetivo:</h4>Dado dos polinomios seleccionados por el usuario, se los multiplica factor por factor.<h4>Casos:</h4>1. [1, 2, 3, 4] <br> 2. [2, 2, 2, 2] <br> 3. [5, 1, 3, 4] <br> 4. [8, 7, 6, 5]",
+        "introduction": "<h4>Objetivo:</h4>Dado dos polinomios seleccionados por el usuario, se los multiplica factor por factor.<br> <br><h4>Casos:</h4>1. [1, 2, 3, 4] <br> 2. [2, 2, 2, 2] <br> 3. [5, 1, 3, 4] <br> 4. [8, 7, 6, 5]",
         "inputs":[
             {
                 "name":"poli1",
@@ -48,7 +48,7 @@
         "title":"Distancia",
         "description": "Solicitar al usuario dos puntos de coordenadas x e y, y calcular la distancia entre ellos y la recta que los une.",
         "difficulty": 1,
-        "introduction": "<h4>Objetivo:</h4>Dado dos puntos en el plano caracterizados por sus coordenadas, se calcula la distancia entre ellos y los datos de la recta que une a ambos.<h4>Casos:</h4><br>(5, 8), (-3, 10), (-2, -7), (1, -1), (6, 6), (-21, 11), (0, -3), (0, 0)",
+        "introduction": "<h4>Objetivo:</h4>Dado dos puntos en el plano caracterizados por sus coordenadas, se calcula la distancia entre ellos y los datos de la recta que une a ambos.<br> <br><h4>Casos:</h4>(5, 8), (-3, 10), (-2, -7), (1, -1), (6, 6), (-21, 11), (0, -3), (0, 0)",
         "inputs":[
             {
                 "name":"p1",
@@ -75,7 +75,7 @@
         "title":"Lista de distancias",
         "description": "Solicitar al usuario 3 puntos, calcular las distancias, agregarlas a una lista e imprimirlas",
         "difficulty": 4,
-        "introduction": "<h4>Objetivo:</h4>Dado una lista de números por el usuario, se calcula la media aritmética entre ellos.<h4>Casos:</h4>(3, 7), (-2, 10),(-5, -5),(-1, 1),(2, -9),(0, 0),(0, 15),(-2, 12),(-6, 0)",
+        "introduction": "<h4>Objetivo:</h4>Dado una lista de números por el usuario, se calcula la media aritmética entre ellos. <br> <br><h4>Casos:</h4>(3, 7), (-2, 10),(-5, -5),(-1, 1),(2, -9),(0, 0),(0, 15),(-2, 12),(-6, 0)",
         "inputs":[
             {
                 "name":"p1",
@@ -101,6 +101,124 @@
                     "-6, 0"
                 ]
             }
+        ]
+    },
+    {
+        "id":5,
+        "title":"Divisores",
+        "description": "Solicitar al usuario un número natural y se calcula los divisores del mismo, agregandolos a una list.",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4>Se agrega a una lista todos los divisores del número dado:<h4>Casos:</h4>24, 17, 30, 8",
+        "inputs":[
+            {
+                "name":"n",
+                "options":[
+                    "24",
+                    "17",
+                    "30",
+                    "8"
+                ]
+            }
+        ]
+    },
+    {
+        "id":6,
+        "title":"Grupo etario",
+        "description": "Se solicita al usuario que seleccione distintas personas con sus edades y se las divide según grupo etario.",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4>A partir de personas seleccionadas por el usuario se las separa según edad.",
+        "inputs":[
+            {
+                "name":"person1",
+                "options":[
+                    "Alejandro, 34",
+                    "Laura, 16",
+                    "Manuel, 42",
+                    "Carmen, 77",
+                    "Iván, 25",
+                    "Rocío, 18",
+                    "Felipe, 47",
+                    "Andrea, 20",
+                    "Javier, 68",
+                    "Marta, 26"
+                ]
+            },
+            {
+                "name":"person2",
+                "options":[
+                    "Pedro, 45",
+                    "Silvia, 30",
+                    "Guillermo, 22",
+                    "Raquel, 79",
+                    "Diego, 39",
+                    "Natalia, 17",
+                    "Fernando, 70",
+                    "Sara, 27",
+                    "Marcos, 48",
+                    "Clara, 19"
+                ]
+            },
+            {
+                "name":"person3",
+                "options":[
+                    "Luis, 50",
+                    "Patricia, 32",
+                    "Mario, 25",
+                    "Pilar, 29",
+                    "Alberto, 40",
+                    "Verónica, 15",
+                    "Ricardo, 80",
+                    "Alicia, 21",
+                    "Pablo, 38",
+                    "Miriam, 26"
+                ]
+            },
+            {
+                "name":"person4",
+                "options":[
+                    "Juan, 41",
+                    "Isabel, 36",
+                    "Daniel, 24",
+                    "Teresa, 45",
+                    "Antonio, 28",
+                    "Sonia, 31",
+                    "Víctor, 22",
+                    "Ana, 76",
+                    "Rafael, 37",
+                    "Carla, 17"
+                ]
+            },
+            {
+                "name":"person5",
+                "options":[
+                    "Gabriel, 30",
+                    "Mónica, 43",
+                    "Francisco, 51",
+                    "Belén, 35",
+                    "Samuel, 27",
+                    "Julia, 73",
+                    "Roberto, 15",
+                    "Alba, 25",
+                    "Eduardo, 40",
+                    "Beatriz, 78"
+                ]
+            },
+            {
+                "name":"person6",
+                "options":[
+                    "Sergio, 26",
+                    "Yolanda, 49",
+                    "Óscar, 31",
+                    "Helena, 23",
+                    "Andrés, 44",
+                    "Vanessa, 39",
+                    "Adrián, 32",
+                    "Nuria, 19",
+                    "Jorge, 35",
+                    "Cristina, 80"
+                ]
+            }
+            
         ]
     }
 ]

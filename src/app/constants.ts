@@ -1,7 +1,7 @@
 const REGEX_RETURN_VARIABLES = /^\s*([a-zA-Z_][a-zA-Z0-9_]*(?:\s*,\s*[a-zA-Z_][a-zA-Z0-9_]*)*)\s*=/;
 const REGEX_VARIABLE_DECLARATION = /(\w+)\s*=\s*(.+)/;
 const REGEX_OPERATIONS = /(\w+)\s*(\+=|-=|\*=|\/=|\/\/=)\s*(.+)/;
-const REGEX_FUNCTIONS = /\b(input|float|abs|int|len|str|math\.\w+)\s*\(([^()]+)\)/g;
+const REGEX_FUNCTIONS = /\b(input|float|abs|int|str|math\.\w+)\s*\(([^()]+)\)/g;
 const REGEX_PRINT = /print\s*\(\s*(['"]?)(.*?)\1\s*\)/;
 const REGEX_RETURN = /^\s*return(?:\s+(.*))?$/;
 const REGEX_DEF = /^def\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\(([^)]*)\)/;
@@ -10,8 +10,9 @@ const REGEX_LIST = /^\[[^\]]*\]$/;
 const REGGEX_SET = /^\{[^}]+\}$/;
 const REGGEX_TUPLE = /^\( *(?:[^(),]+|"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|\([^()]*\|[ \t\n\r]*|(?:,\s*)?)*\) *$/;
 const REGEX_DICTIONARY = /^\{(\s*".+?"\s*:\s*".+?"\s*(,\s*".+?"\s*:\s*".+?"\s*)*)?\}$/
-const REGEX_COLLECTION_ADD = /^(\w+)\.(append|add)\((.+?)\)$|^(\w+)\s*(\+)\s*\((.+?)\)$/;
+const REGEX_COLLECTION_ADD = /^(\w+)\.(append|add)\((.+?)\)$|^(\w+)\s*(\+)\s*(\((.+?)\)|(\w+))$/;
 const REGEX_COLLECTION_SUBSTRACT = /^(\w+)\.(remove|discard)\((.+?)\)$/
+const REGEX_COLLECTION_LEN = /^len\((\w+)\)$/;
 const REGEX_COLLECTION_ACCESS = /^(\w+)\[(.+?)\]$/;
 const REGEX_FOR = /[a-zA-Z_]\w*\s+in\s+[a-zA-Z_]\w*/;
 const IMAGINARY = /[-+]? ?\d*\.?\d+i/;
@@ -24,6 +25,8 @@ const COLLECTION_IDENTIFIER = /\%.*?\%/;
 const INDEXING_COLLECTION = /^\w+\[.*\]/;
 const REGEX_DIVISION = /(\d+)\s*\/\/\s*(\d+)/;
 const REGEX_EXPONENT = /(\d+(?:\.\d+)?)\s*\*\*\s*(\d+(?:\.\d+)?)/;
+const REGEX_IN_COLLECTIONS = /^([^ ]+)\s+in\s+(\w+)$/;
+const REGEX_COLLECTION_OPERATIONS = /^(\w+)\.(intersection|difference)\(([^)]+)\)$/;
 
 const IF = 'if';
 const WHILE = 'while';
@@ -75,7 +78,10 @@ export const REGEX_CONSTS = {
     INDEXING_COLLECTION,
     REGEX_DIVISION,
     REGEX_EXPONENT,
-    REGEX_NOT_IN_OPERATION
+    REGEX_NOT_IN_OPERATION,
+    REGEX_COLLECTION_LEN,
+    REGEX_IN_COLLECTIONS,
+    REGEX_COLLECTION_OPERATIONS
 };
 
 export const STRUCTURES = {

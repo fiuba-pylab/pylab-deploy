@@ -1,7 +1,10 @@
 <mat-toolbar color="primary">
+    <button mat-icon-button [hidden]="isHomePage" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
     <img src="assets/logo-blanco.png" alt="Pylab" class="logo"><img>
     <span class="spacer"></span>
     <button mat-icon-button (click)="openHelpDialog()">
 			<mat-icon>help</mat-icon>
 		</button>
-  </mat-toolbar>
+</mat-toolbar>

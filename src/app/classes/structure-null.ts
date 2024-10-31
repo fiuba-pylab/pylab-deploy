@@ -7,6 +7,7 @@ import { List } from "./list";
 import { Structure } from "./structure";
 import { Tuple } from "./tuple";
 import { Collection } from "./collection";
+import { Set } from "./set";
 
 const operations = {
     '+=': (a: number, b: number) => a + b,
@@ -14,6 +15,11 @@ const operations = {
     '*=': (a: number, b: number) => a * b,
     '//=': (a: number, b: number) => Math.floor(a / b),
     '/=': (a: number, b: number) => a / b,
+};
+
+const collectionOperations: { [key: string]: (set: Set, ...sets: Set[]) => Set } = {
+    intersection: (set, ...sets) => set.intersection(...sets),
+    difference: (set, ...sets) => set.difference(...sets),
 };
 
 type Operator = keyof typeof operations;
@@ -26,7 +32,6 @@ export class NullStructure extends Structure {
 
     override async execute(): Promise<{ amount: number; finish: boolean; }> {
         const variables = this.variablesService!.getVariables(this.context);
-        console.log("variables", variables)
         this.lines[0] = this.lines[0].trim();
         if (this.lines[0].split(' ')[0] == 'elif') {
             return { amount: 0, finish: true };
@@ -41,15 +46,47 @@ export class NullStructure extends Structure {
         if (variableDeclaration && !print) {
            const varName = variableDeclaration[1];
            let varValue = await this.applyFunctions(variableDeclaration[2], variables, varName);
-           let collection = await this.matchCollection(varValue, variables, variableDeclaration[2])
+           let collectionFunctions = varValue.match(REGEX_CONSTS.REGEX_COLLECTION_LEN);
+           let collectionsIn = varValue.match(REGEX_CONSTS.REGEX_IN_COLLECTIONS);
+           let collectionsOperations = varValue.match(REGEX_CONSTS.REGEX_COLLECTION_OPERATIONS);
            
+           if(collectionFunctions){
+               variables[varName] = variables[collectionFunctions[1]]?.len();
+               this.variablesService!.setVariables(this.context, variables);
+               return { amount: 1, finish: true };
+           }
+
+            if(collectionsIn){
+                const elemento = collectionsIn[1];
+                const variable = collectionsIn[2];
+                if(variables[variable].in(elemento)){
+                    variables[varName] = 'True';
+                    this.variablesService!.setVariables(this.context, variables);
+                    return { amount: 1, finish: true };
+                }
+            }
+
+            if(collectionsOperations){
+                const variable = collectionsOperations[1];
+                const operation = collectionsOperations[2];
+                const values = collectionsOperations[3].split(',').map((value: string) => value.trim());
+                const sets = values.map((value: string) => variables[value]);
+                if (collectionOperations[operation]) {
+                    variables[varName] = collectionOperations[operation](variables[variable], ...sets);
+                    this.variablesService!.setVariables(this.context, variables);
+                }
+                return { amount: 1, finish: true };
+            }
+
+           let collection = await this.matchCollection(varValue, variables, variableDeclaration[2]);
+         
             if (!collection) {
                 variables[varName] = evaluate(varValue);
             } else {
                 variables[varName] = collection
             }
-
         }
+
         if (operations) {
             const variable = operations[1];
             const operator = operations[2];
@@ -57,6 +94,7 @@ export class NullStructure extends Structure {
             value = await this.applyFunctions(value, variables);
             variables[variable] = this.applyOperation(Number(replaceVariables(variable, variables)), operator, Number(evaluate(value)));
         }
+
         if (print) {
             let value = print[1]
             if (print[2]) {
@@ -74,6 +112,7 @@ export class NullStructure extends Structure {
             }
             this.codeService!.setPrint(printValue);
         }
+
         if (collectionAdd) {
             const variable = collectionAdd[1];
             const operator = collectionAdd[2];
@@ -81,12 +120,19 @@ export class NullStructure extends Structure {
             if (VALID_OPERATORS.validAddOperators.includes(operator)) {
                 variables[variable].add(await this.applyFunctions(value, variables, variable))
             } else if (collectionAdd[5] == '+') {
-                const tupleValues = collectionAdd[6].split(', ')
-                for (let tupleValue of tupleValues) {
+                let tuple;
+                let values = []
+                if(tuple = variables[collectionAdd[6]]){
+                    values = tuple.values
+                } else {
+                    values = collectionAdd[6].split(', ')
+                }
+                for (let tupleValue of values) {
                     variables[collectionAdd[4]].add(tupleValue)
                 }
             }
         }
+
         if (collectionSubstract) {
             const variable = collectionSubstract[1];
             const operator = collectionSubstract[2];
@@ -95,6 +141,7 @@ export class NullStructure extends Structure {
                 variables[variable].substract(await this.applyFunctions(value, variables, variable))
             }
         }
+
         if(collectionIndexing){
             const collection_index = this.lines[0].split('=')[0]
             const varnName = collection_index.split('[')[0]
@@ -106,8 +153,6 @@ export class NullStructure extends Structure {
                 const evaluate_index = evaluate(await this.applyFunctions(index_values, variables))
                 collection.insert(evaluate_index, varValue)
             }
-            
-
         }
 
         if (isReturn) {
@@ -139,11 +184,6 @@ export class NullStructure extends Structure {
                 return String(Number(evalArgs));
             case NATIVE_FUNCTIONS.INT:
                 return String(parseInt(evalArgs));
-            case NATIVE_FUNCTIONS.LEN:
-                if(evalArgs instanceof Collection){
-                    return String(evalArgs.values.length)
-                }
-                return String((evalArgs as string).length);
             case NATIVE_FUNCTIONS.STR:
                 return String(evalArgs);
             case NATIVE_FUNCTIONS.MATH_POW:
@@ -166,6 +206,8 @@ export class NullStructure extends Structure {
                 return (Math.asin(Number(evalArgs))).toString();
             case NATIVE_FUNCTIONS.MATH_LOG10:
                 return (Math.log10(Number(evalArgs))).toString();
+            case NATIVE_FUNCTIONS.LEN:
+                return String((evalArgs as string).length);
             case NATIVE_FUNCTIONS.INPUT:
                 return await this.codeService!.getInput(evalArgs, varName ?? '');
             case NATIVE_FUNCTIONS.ABS:
@@ -186,8 +228,6 @@ export class NullStructure extends Structure {
                 return variables[value][Number(index)]
             }
             return variables[value].access(accessIndex) ? variables[value].access(accessIndex) : 'None' 
-
-            
         }
         const variable = variables[varValue]
         if(variable && variable instanceof Collection){
@@ -205,24 +245,24 @@ export class NullStructure extends Structure {
             }
             return new List(values);
         } else if (varMatch = varValue.match(REGEX_CONSTS.REGEX_DICTIONARY)) {
-            const dictionaryElements = varMatch[1].replace(', ', ',').split(',');
+            const dictionaryElements = varValue.slice(1, varValue.length - 1).replace(/\, /g, ',').split(',');
             const dictionary = new Dictionary();
             let element;
-            for (element of dictionaryElements) {
-                dictionary.add(element.toString());
+            if(dictionaryElements[0] != ''){
+                for (element of dictionaryElements) {
+                    dictionary.add(element.toString());
+                }
             }
             return dictionary;
         } else if (varValue.match(REGEX_CONSTS.REGGEX_SET)) {
-            const values = varValue.slice(1, varValue.length - 1).replace(', ', ',').split(',');
+            const values = varValue.slice(1, varValue.length - 1).replace(/\, /g, ',').split(',');
             return new Set(values);
         } else if (varValue.match(REGEX_CONSTS.REGGEX_TUPLE)) {
-            const values = varValue.slice(1, varValue.length - 1).replace(', ', ',').split(',');
+            const values = varValue.slice(1, varValue.length - 1).replace(/\, /g, ',').split(',');
             return new Tuple(values);
         }  else {
             return null;
         }
-
-
     }
 
     override clone(codeService: CodeService | null, variablesService: VariablesService | null): Structure {

@@ -1,7 +1,4 @@
 import { Collection } from "./classes/collection";
-import { Dictionary } from "./classes/dictionary";
-import { List } from "./classes/list";
-import { Tuple } from "./classes/tuple";
 import { NATIVE_FUNCTIONS, REGEX_CONSTS } from "./constants";
 
 export function replaceVariables(template: string, valores: { [clave: string]: any[] }): string {
@@ -9,30 +6,21 @@ export function replaceVariables(template: string, valores: { [clave: string]: a
     return Object.entries(valores).reduce((resultado, [clave, valor]) => {
         const regex = new RegExp(`\\b${escapeRegExp(clave)}\\b`, 'g');
         var replacement;
-        let leftCollectionDelimeter = ''
-        let rightCollectionDelimeter = ''
-        if (valor instanceof List) {
-            leftCollectionDelimeter = '['
-            rightCollectionDelimeter = ']'
-            replacement = valor.values
-        }else if(valor instanceof Dictionary){
-            leftCollectionDelimeter = '{'
-            rightCollectionDelimeter = '}'
-        } else if (valor instanceof Tuple) {
-            replacement = `${clave}`
-        } else{
-            if(typeof valor === 'string'){
-                if(`'${valor}'`.match(NATIVE_FUNCTIONS.NONE)){
-                    replacement = 'None'
-                } else {
-                    replacement = `'${valor}'`
-                }
+        
+        if(valor instanceof Collection){
+            return resultado;
+        }
+        if(typeof valor === 'string'){
+            if(`'${valor}'`.match(NATIVE_FUNCTIONS.NONE)){
+                replacement = 'None'
             } else {
-                replacement = valor
+                replacement = `'${valor}'`
             }
+        }else{
+            replacement = valor;
         }
        
-        return resultado.replace(regex, leftCollectionDelimeter + replacement + rightCollectionDelimeter);
+        return resultado.replace(regex, Array.isArray(replacement) ? JSON.stringify(replacement) : replacement);
     }, template);
 }
 function escapeRegExp(string: string): string {

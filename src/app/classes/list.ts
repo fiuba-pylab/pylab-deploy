@@ -17,6 +17,7 @@ export class List extends Collection{
     override insert(index:number, value:any){
         this.values[index] = value
     }
+    
     override print(): string {
         let values_aux = []
         for(let value of this.values){

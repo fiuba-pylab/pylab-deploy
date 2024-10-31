@@ -7,7 +7,7 @@ import { List } from "./list";
 import { DefStructure } from "./structure-def";
 import { IfStructure } from "./structure-if";
 import { NullStructure } from "./structure-null";
-import { WhileStructure } from "./structure-while";
+import { IterableStructure } from "./structure-iterable";
 
 
 export class StructureFactory {
@@ -18,10 +18,10 @@ export class StructureFactory {
             case STRUCTURES.IF: 
                 return new IfStructure(level, detectCondition(code), codeService, variablesService, context);
             case STRUCTURES.WHILE:
-                return new WhileStructure(level, detectCondition(code), codeService, variablesService, context);
+                return new IterableStructure(level, detectCondition(code), codeService, variablesService, context);
             case STRUCTURES.FOR:
                 const {newCondition, collectionInfo} = forConfiguration(code, variablesService, context)
-                return new WhileStructure(level, newCondition, codeService, variablesService, context, collectionInfo);
+                return new IterableStructure(level, newCondition, codeService, variablesService, context, collectionInfo);
             case STRUCTURES.DEF:
                 return new DefStructure(level, code, codeService, variablesService, context);
             default:
@@ -60,10 +60,7 @@ function forConfiguration(code:string, variablesService: VariablesService, conte
         const collectionIsArray = collection?.values.length
         const numberValuesCollection = collectionIsArray?collectionIsArray:(Object.keys(collection?.values).length)
         //definición del iterador
-        if(!variables['ForIteratorVariable' + tempVarName]){
-            variables['ForIteratorVariable' + tempVarName] = []
-        }
-        variables['ForIteratorVariable' + tempVarName].push(numberValuesCollection - 1)
+        variables['ForIteratorVariable' + tempVarName] = numberValuesCollection - 1;
         //definición de la variable a iterar
         variables[tempVarName] = collection?.values[collectionIsArray?0:Object.keys(collection?.values)[0]]
         newCondition = `ForIteratorVariable${tempVarName} > 0`

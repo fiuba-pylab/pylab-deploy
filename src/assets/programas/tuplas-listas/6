@@ -1,0 +1,30 @@
+
+person1 = (input("Seleccione una persona"))
+person2 = (input("Seleccione una persona"))
+person3 = (input("Seleccione una persona"))
+person4 = (input("Seleccione una persona"))
+person5 = (input("Seleccione una persona"))
+person6 = (input("Seleccione una persona"))
+
+people = [person1, person2, person3, person4, person5, person6]
+adolescentes = ('adolescentes')
+jovenes = ('jovenes')
+adultos = ('adultos')
+ancianos = ('ancianos')
+
+for person in people:
+    edad = person[1]
+    if edad >= 12 and edad <= 18:
+        adolescentes + person
+    if edad > 18 and edad <= 30:
+        jovenes + person
+    if edad > 30 and edad <= 60:
+        adultos + person
+    if edad > 60:
+        ancianos + person
+
+
+print(f'{adolescentes}')
+print(f'{jovenes}')
+print(f'{adultos}')
+print(f'{ancianos}')

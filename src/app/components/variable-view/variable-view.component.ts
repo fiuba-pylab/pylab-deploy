@@ -23,8 +23,6 @@ export class VariableViewComponent {
     this.variablesService.contexts.subscribe((value) => {
       this.contexts = value;
       this.contextsKeys = Array.from(this.contexts.keys());
-      console.log(this.contexts);
-      
     });
 
     this.codeService.print.subscribe((value) => {

@@ -13,5 +13,13 @@ export abstract class Collection{
     abstract insert(index: number | string, value:any):void
 
     abstract print():string
+
+    len(): number{
+        return this.values.length
+    }
+
+    in(element:any): boolean{
+        return this.values.includes(element)
+    }
 }
 
