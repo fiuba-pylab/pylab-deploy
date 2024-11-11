@@ -1,0 +1,13 @@
+texto = input("Introduce un texto: ")
+frecuencia_palabras = {}
+texto_split = texto.split()
+
+for palabra in texto_split:
+    hay_palabra = palabra in frecuencia_palabras
+    if hay_palabra:
+        valor = frecuencia_palabras[palabra] 
+        frecuencia_palabras[palabra] = valor + 1
+    else:
+        frecuencia_palabras[palabra] = 1
+
+print(f'{frecuencia_palabras}')

@@ -1,4 +1,3 @@
-
 n = input("Seleccione un número natural")
 iterator = 0
 multiples = []

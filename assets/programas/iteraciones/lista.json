@@ -4,7 +4,7 @@
         "title": "Decimal a binario",
         "description": "Recibe un número decimal y lo convierte a binario.",
         "difficulty": 1,
-        "introduction": "<h4>Objetivo:</h4> Convierte a binario un número decimal elegido por el usuario <h4>Casos:</h4> 3, 11, 19, 32",
+        "introduction": "<h4>Objetivo:</h4> Convierte a binario un número decimal elegido por el usuario. <br><br><h4>Casos:</h4> 3, 11, 19, 32",
         "inputs":[
             {
                 "name":"n",
@@ -15,6 +15,11 @@
                     "32"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -34,6 +39,11 @@
                     "4"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -52,8 +62,12 @@
                     "25"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
-
     },
     {
         "id": 4, 
@@ -71,6 +85,11 @@
                     "20"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -89,6 +108,11 @@
                     "20"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -107,6 +131,11 @@
                     "100"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -125,6 +154,11 @@
                     "20"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -144,6 +178,11 @@
                     "25"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -171,6 +210,11 @@
                     "40"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     },
     {
@@ -192,6 +236,11 @@
                     "104"
                 ]
             }
+        ],
+        "comments": [
+            "while",
+            "if",
+            "nativas"
         ]
     }
 ]

@@ -1,0 +1,17 @@
+def tiene_duplicados(lista):
+    valores_unicos = set()
+    for valor in lista:
+        valores_unicos.add(valor)
+    len_lista = len(lista)
+    len_valores_unicos = len(valores_unicos)
+    if len_lista == len_valores_unicos:
+        return False
+    else:
+        return True
+
+lista = [input('Ingrese la lista: ')] 
+duplicados = tiene_duplicados(lista)
+if duplicados:
+    print(f'{lista} tiene valores duplicados')
+else:
+    print(f'{lista} no tiene valores duplicados')

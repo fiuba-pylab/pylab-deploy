@@ -1,0 +1,13 @@
+palabras = {}
+
+clave = input("Ingresa la palabra que deseas agregar: ")
+valor = input("Ingresa el valor asociado a la palabra: ")
+while clave != "BASTA":
+    palabras[clave] = valor
+    print(f'Se ha agregado "{clave}": {valor}')
+    clave = input("Ingresa la palabra que deseas agregar: ")
+    valor = input("Ingresa el valor asociado a la palabra: ")
+
+clave = input("Ingresa la palabra que deseas buscar: ")
+contiene = clave in palabras
+print(f'¿"{clave}" está en el diccionario? {contiene}')
