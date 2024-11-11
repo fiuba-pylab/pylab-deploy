@@ -3,9 +3,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatDialog } from '@angular/material/dialog';
-import { HelpDialogComponent } from '../../components/helpDialog/helpDialog.component';
 import { NavigationService } from '../../services/navigation.service';
 import { Router } from '@angular/router';
+import { HelpDialogComponent } from '../../components/help-dialog/help-dialog.component';
 @Component({
   selector: 'app-header',
   standalone: true,

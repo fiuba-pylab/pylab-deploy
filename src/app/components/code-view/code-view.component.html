@@ -1,24 +1,9 @@
 <div class="general-container">
-    <!--
-        <div class="inputs-container">
-            @for (select of inputs; track $index) {
-                <mat-form-field >
-                    <mat-label>{{select.name}}</mat-label>
-                    <mat-select [formControl]="forms[$index].form" panelClass="dropDown-seasons-panel">
-                        <mat-option *ngFor="let option of select.options" [value]="option" >{{option}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-                
-            }
-            <button mat-button (click)="loadSelects()">Load</button>
-        </div>
-        
-    -->
-    <div id="editor-container">
+    <section id="editor-container">
         <!-- Editor de código -->
-    </div>
+    </section>
 
-    <div class="buttons-container">
+    <section class="buttons-container">
         <button class="icon" [class]="isRunning && !isPaused? 'disabled': ''" mat-icon-button [disabled]="(isRunning && !isPaused) || (highlightLine == 1 && !previousActivated)" aria-label="previous-arrow" (click)="previousLine()">
             <mat-icon aria-hidden="false" fontIcon="arrow_back_ios"></mat-icon>
         </button>
@@ -44,6 +29,6 @@
         </mat-menu>
 
         <mat-icon class="execution-info" [class]="isFinished? 'finished': 'executing'" aria-hidden="false" aria-label="checked" fontIcon="check_circle_outline"></mat-icon>
-    </div>
+    </section>
     
 </div>

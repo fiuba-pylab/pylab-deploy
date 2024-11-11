@@ -14,6 +14,12 @@
                     "50, 50, 50, 50, 50, 1"
                 ]
             }
+        ],
+        "comments": [
+            "nativas",
+            "listas",
+            "if",
+            "for"
         ]
     },
     {
@@ -41,6 +47,12 @@
                     "8, 7, 6, 5"
                 ]
             }
+        ],
+        "comments":[
+            "nativas",
+            "listas",
+            "if",
+            "for"
         ]
     },
     {
@@ -68,6 +80,10 @@
                     "0, 0"
                 ]
             }
+        ],
+        "comments":[
+            "nativas",
+            "tuplas"
         ]
     },
     {
@@ -101,6 +117,14 @@
                     "-6, 0"
                 ]
             }
+        ],
+        "comments": [
+            "nativas",
+            "tuplas",
+            "listas",
+            "if",
+            "def",
+            "for"
         ]
     },
     {
@@ -119,6 +143,12 @@
                     "8"
                 ]
             }
+        ],
+        "comments": [
+            "nativas",
+            "listas",
+            "if",
+            "while"        
         ]
     },
     {
@@ -129,7 +159,7 @@
         "introduction": "<h4>Objetivo:</h4>A partir de personas seleccionadas por el usuario se las separa según edad.",
         "inputs":[
             {
-                "name":"person1",
+                "name":"persona1",
                 "options":[
                     "Alejandro, 34",
                     "Laura, 16",
@@ -144,7 +174,7 @@
                 ]
             },
             {
-                "name":"person2",
+                "name":"persona2",
                 "options":[
                     "Pedro, 45",
                     "Silvia, 30",
@@ -159,7 +189,7 @@
                 ]
             },
             {
-                "name":"person3",
+                "name":"persona3",
                 "options":[
                     "Luis, 50",
                     "Patricia, 32",
@@ -174,7 +204,7 @@
                 ]
             },
             {
-                "name":"person4",
+                "name":"persona4",
                 "options":[
                     "Juan, 41",
                     "Isabel, 36",
@@ -189,7 +219,7 @@
                 ]
             },
             {
-                "name":"person5",
+                "name":"persona5",
                 "options":[
                     "Gabriel, 30",
                     "Mónica, 43",
@@ -204,7 +234,7 @@
                 ]
             },
             {
-                "name":"person6",
+                "name":"persona6",
                 "options":[
                     "Sergio, 26",
                     "Yolanda, 49",
@@ -218,7 +248,13 @@
                     "Cristina, 80"
                 ]
             }
-            
+        ],
+        "comments":[
+            "nativas",
+            "listas",
+            "tuplas",
+            "if",
+            "for"
         ]
     }
 ]

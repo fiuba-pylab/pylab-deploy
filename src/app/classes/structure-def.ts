@@ -5,7 +5,9 @@ import { evaluate, replaceVariables } from "../utils";
 import { Context } from "./context";
 import { Structure } from "./structure";
 import { Collection } from "./collection";
+import { Dictionary } from "./dictionary";
 
+const innerBracesRegex = /\{([^}]+)\}/;
 export class DefStructure extends Structure{
     constructor(level: number, condition: string, codeService: CodeService | null, variablesService: VariablesService | null, context: Context) {
         super(level, condition, codeService, variablesService, context);
@@ -16,7 +18,11 @@ export class DefStructure extends Structure{
             this.parameters = params.reduce((acc: any, param: string) => {
                 if(param.match(REGEX_CONSTS.REGEX_NAMED_PARAMS)){
                     const [key, value] = param.split("=");
-                    acc[key.trim()] = [evaluate(value)];
+                    if(value.trim() == '{}'){
+                        acc[key.trim()] = new Dictionary();
+                    }else{
+                        acc[key.trim()] = evaluate(value);
+                    }
                     return acc;
                 }
                 acc[param] = [];
@@ -134,7 +140,14 @@ export class DefStructure extends Structure{
         );
         
         clone.currentLine = this.currentLine;
-        clone.parameters = JSON.parse(JSON.stringify(this.parameters));
+        clone.parameters = {};
+        Object.keys(this.parameters).forEach((key) => {
+            if(this.parameters[key] instanceof Collection){
+                clone.parameters[key] = this.parameters[key].clone();
+                return;
+            }
+            clone.parameters[key] = this.parameters[key];
+        });
         clone.name = this.name;
         clone.position = this.position;
         clone.called = this.called;
@@ -154,7 +167,14 @@ export class DefStructure extends Structure{
         );
         
         clone.currentLine = this.currentLine;
-        clone.parameters = JSON.parse(JSON.stringify(this.parameters));
+        clone.parameters = {};
+        Object.keys(this.parameters).forEach((key) => {
+            if(this.parameters[key] instanceof Collection){
+                clone.parameters[key] = this.parameters[key].clone();
+                return;
+            }
+            clone.parameters[key] = this.parameters[key];
+        });
         clone.name = this.name;
         clone.position = this.position;
         clone.called = this.called;

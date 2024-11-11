@@ -14,19 +14,14 @@ import { MatLabel } from '@angular/material/form-field';
 export class VariableViewComponent {
   contexts: Map<Context, any> = new Map<Context, {[keys: string]: any}>();
   variableKeys: string[] = [];
-  print: string = '';
   contextsKeys: Context[] = [];
   //jsPlumbInstance: any;
-  constructor(private variablesService: VariablesService, private codeService: CodeService) { }
+  constructor(private variablesService: VariablesService) { }
 
   ngOnInit(): void {
     this.variablesService.contexts.subscribe((value) => {
       this.contexts = value;
       this.contextsKeys = Array.from(this.contexts.keys());
-    });
-
-    this.codeService.print.subscribe((value) => {
-      this.print = value;
     });
   }
 

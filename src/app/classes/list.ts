@@ -30,4 +30,9 @@ export class List extends Collection{
         return '['+values_aux+']';
     }
 
+    override clone(): Collection {
+        const clone = new List();
+        clone.values = JSON.parse(JSON.stringify(this.values));
+        return clone;
+    }
 }

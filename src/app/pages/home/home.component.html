@@ -1,20 +1,18 @@
-<div class="mainContainer">
-  <h1 class="title">
-    Seleccione un tema...
-  </h1>
+<h1 class="title">
+  Seleccione un tema...
+</h1>
 
-  <div class="containerCards">
-    <div *ngFor="let card of cards; let i=index">
-      <mat-card class="home-card" (click)="listPrograms(card.tipo)">
-        <mat-card-header>
-          <mat-card-title>{{ card.titulo }}</mat-card-title>
-        </mat-card-header>
-        @if (card.imagen) {
-        <img src="assets/{{ card.imagen }}" alt="">
-        } @else {
-        <app-svg [archivo]="card.archivo"></app-svg>
-        }
-      </mat-card>
-    </div>
-  </div>
+<div id="cards-content">
+  @for (card of cards; track $index){
+    <mat-card class="home-card" (click)="listPrograms(card.tipo)">
+      <mat-card-header>
+        <mat-card-title>{{ card.titulo }}</mat-card-title>
+      </mat-card-header>
+      @if (card.imagen) {
+      <img src="assets/{{ card.imagen }}" alt="">
+      } @else {
+      <app-svg [archivo]="card.archivo"></app-svg>
+      }
+    </mat-card>
+  }
 </div>

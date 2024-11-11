@@ -1,23 +1,14 @@
-dict1 = {"name1": "value1", "name2": "value2", "name3": "value3"}
-dict1["name4"] = "value4"
+frutas = [input("Ingrese frutas y cantidades: ")]
+cantidades_frutas = {}
+for fruta in frutas:
+    fruta_split = fruta.split()
+    nombre = fruta_split[0]
+    cantidad = int(fruta_split[1])
+    esta_fruta = nombre in cantidades_frutas
+    if esta_fruta:
+        cant_actual = int(cantidades_frutas[nombre])
+        cantidades_frutas[nombre] = cantidad + cant_actual
+    else:
+        cantidades_frutas[nombre] = cantidad
 
-for elem in dict1:
-    print(f'{elem}')
-
-list1 = ["element1", "element2", "element3"]
-list1.append('element4')
-aux = list1[1]
-print(f'{aux}')
-for element in list1:
-    print(f"{element}")
-
-tuple1 = (1, 2, 3)
-for elem in tuple1:
-    print("entra a iteracion")
-    print(f'{elem}')
-
-
-
-
-aux2 = dict1["name1"]
-print(f'{aux2}')
+print(f'{cantidades_frutas}')

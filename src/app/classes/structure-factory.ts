@@ -6,7 +6,7 @@ import { Context } from "./context";
 import { List } from "./list";
 import { DefStructure } from "./structure-def";
 import { IfStructure } from "./structure-if";
-import { NullStructure } from "./structure-null";
+import { CodeInstruction } from "./code-instruction"
 import { IterableStructure } from "./structure-iterable";
 
 
@@ -25,7 +25,7 @@ export class StructureFactory {
             case STRUCTURES.DEF:
                 return new DefStructure(level, code, codeService, variablesService, context);
             default:
-                return new NullStructure(level, "", codeService, variablesService, context);
+                return new CodeInstruction(level, "", codeService, variablesService, context);
         }        
     }
 

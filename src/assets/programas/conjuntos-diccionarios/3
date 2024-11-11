@@ -1,0 +1,14 @@
+A = {input("Ingrese los nombres del conjunto A: ")}
+B = {input("Ingrese los nombres del conjunto B: ")}
+
+diferencia_a = A - B
+diferencia_b = B - A
+interseccion = A & B
+union = A | B
+diferencia_simetrica = A ^ B
+
+print(f'Diferencia A - B: {diferencia_a}')
+print(f'Diferencia B - A: {diferencia_b}')
+print(f'Intersección: {interseccion}')
+print(f'Unión: {union}')
+print(f'Diferencia simétrica: {diferencia_simetrica}')

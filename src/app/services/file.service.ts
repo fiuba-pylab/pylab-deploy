@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { catchError, map, Observable, throwError } from 'rxjs';
 import { Program } from '../classes/program';
+import { Comment } from '../classes/comment';
+import { CdkMonitorFocus } from '@angular/cdk/a11y';
 
 @Injectable({
   providedIn: 'root',
@@ -9,6 +11,7 @@ import { Program } from '../classes/program';
 export class FileService {
 
   private filesUrl = 'assets/programas';
+  private commentsUrl = 'assets/comments/comments.json';
 
   constructor(private http: HttpClient) { }
 
@@ -24,14 +27,6 @@ export class FileService {
 
   getList(folderName: string): Observable<Program[]> {
     const folderUrl = `${this.filesUrl}/${folderName}/lista.json`;
-    let programs: Program[] = [];
-    /* this.http.get(folderUrl, { responseType: 'json' }).subscribe((data: any) => {
-      for (let i = 0; i < data.length; i++) {
-        let program = new Program(data[i].id, data[i].title, data[i].description, data[i].difficulty, data[i].introduction, data[i].inputs);
-        programs.push(program);
-      }
-    });
-    return programs */
     return this.http.get<any[]>(folderUrl).pipe(
       map(data => {
           return data.map(item => new Program(
@@ -40,9 +35,24 @@ export class FileService {
               item.description,
               item.difficulty,
               item.introduction,
-              item.inputs
+              item.inputs,
+              item.comments
           ));
       })
-  );
+    );
+  }
+  
+  getComment(topicName: string): Observable<any> {
+    return this.http.get<any[]>(this.commentsUrl).pipe(
+      map((comments: any[]) => {
+        const comment = comments.find(comment => comment.id === topicName);
+
+        if (comment) {
+          return new Comment(comment.body.title, comment.body.grid_1, comment.body.grid_2, comment.body.grid_3, comment.body.grid_4);
+        } else {
+          throw new Error(`Item with id ${topicName} not found`);
+        }
+      })
+    );
   }
 }

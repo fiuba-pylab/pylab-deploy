@@ -1,0 +1,11 @@
+n = input('Ingrese numero para la secuencia collatz')
+secuencia = set()
+while n != 1:
+    secuencia.add(n)
+    if n % 2 == 0: 
+        n = n // 2 
+    else:
+        n = 3 * n + 1
+secuencia.add(1)
+
+print(f'{secuencia}')

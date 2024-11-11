@@ -1,8 +1,18 @@
 import { Collection } from "./collection";
 
 export class Set extends Collection{
-    override add(element:any){
-        this.values.push(element)
+    constructor(values?: any){
+        if (values){
+            super(values);
+            return;
+        }
+        super();
+        this.values = [];
+    }
+    override add(element: any) {
+        if (!this.values.includes(element)) {
+            this.values.push(element);
+        }
     }
 
     override substract(element?: any): void {
@@ -50,4 +60,43 @@ export class Set extends Collection{
 
         return result;
     }
+
+    union(...sets: Set[]): Set {
+        const result = new Set();
+        const allValues = new Set();
+    
+        const allSets = [this, ...sets];
+        allSets.forEach(set => {
+            set.values.forEach((value: string) => {
+                allValues.add(value.trim()); 
+            });
+        });
+    
+        result.values = Array.from(allValues.values);
+    
+        return result;
+    }
+
+    symmetric_difference(...sets: Set[]): Set {
+        const result = new Set();
+        const allValues = [...this.values, ...sets.flatMap(set => set.values.map((value: any) => value.trim()))];
+
+        allValues.forEach((value: any) => {
+            const isInThisSet = this.values.includes(value);
+            const isInOtherSets = sets.some(set => set.values.includes(value));
+
+            if (isInThisSet !== isInOtherSets) { 
+                result.add(value);
+            }
+        });
+
+        return result;
+    }
+
+    override clone(): Collection {
+        const clone = new Set();
+        clone.values = [...this.values];
+        return clone;
+    }
+    
 }

@@ -5,14 +5,16 @@ export class Program {
     difficulty: number;
     introduction:string;
     inputs:Input[]
+    comments: string[];
 
-    constructor(id: string, title: string, description: string, difficulty: number, introduction:string, inputs:Input[]) {
+    constructor(id: string, title: string, description: string, difficulty: number, introduction:string, inputs:Input[], comments: string[]) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.difficulty = difficulty;
         this.introduction = introduction
         this.inputs = inputs
+        this.comments = comments;
     }
 }
 

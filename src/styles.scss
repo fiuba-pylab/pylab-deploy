@@ -1,21 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
 
-.selected-line{
-    background-color: rgba(128, 128, 128, 0.5);
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.selected-line {
+	background-color: rgba(128, 128, 128, 0.5);
 }
 
 .dropDown-seasons-panel {
-    border-radius: 10px !important;
-    border: 1px solid gray !important;
-    position: absolute !important;
-    top: 10px !important;
+	border-radius: 10px !important;
+	border: 1px solid gray !important;
+	position: absolute !important;
+	top: 10px !important;
 }
 
-button:hover { 
-    cursor: pointer;
+button:hover {
+	cursor: pointer;
+}
+
+#variables-container,
+#output-container {
+	position: relative;
+	max-height: 100%;
+
+	.title {
+		display: inline-block;
+		width: fit-content;
+		font-size: 0.7em;
+		background: var(--pylab-primary);
+		color: white;
+		position: relative;
+		z-index: 1;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 40vw;
+			height: 2px;
+		}
+	}
+}
+
+#variables-container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+	.title {
+		float: left;
+		border-bottom-right-radius: 50px;
+		border-top-left-radius: 10px;
+		padding: 5px 20px 5px 10px;
+
+		&::before {
+			background: linear-gradient(to left, white, var(--pylab-primary));
+		}
+	}
+
+
+}
+
+#output-container {
+	.title {
+		float: right;
+		border-bottom-left-radius: 50px;
+		border-top-right-radius: 10px;
+		padding: 5px 10px 5px 20px;
+		
+		&::before {
+			right: 10px;
+			background: linear-gradient(to right, white, var(--pylab-primary));
+		}
+	}
+}
+
+ul {
+	padding-left: 20px;
+	list-style-type: circle;
+	li{
+		padding-top: 1.5px
+	}
 }
 
 /* For Firefox */
@@ -30,6 +102,7 @@ button:hover {
 @supports (-webkit-appearance:none) {
 	*::-webkit-scrollbar {
 		width: 5px;
+		height: 5px;
 	}
 
 	*::-webkit-scrollbar-track {

@@ -3,6 +3,14 @@
     <mat-icon (click)="onClose()" class="x-close">close</mat-icon>
 </section>
 <div class="intro-container">
-    
-    <div [innerHTML]="data.program.introduction" class="information"></div>
+    <div class="information">
+    <div [innerHTML]="data.program.introduction" ></div>
+    <br>
+    <h4>Anexos:</h4>
+    <mat-chip-set>
+        @for (comment of data.program.comments; track $index) {
+            <mat-chip mat-button (click)="goTo(comment)">{{ comment }}</mat-chip>
+        }
+    </mat-chip-set>
+</div>
 </div>

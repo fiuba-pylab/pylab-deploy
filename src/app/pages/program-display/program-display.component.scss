@@ -1,46 +1,49 @@
-h1 {
-    margin: 15px;
-    color: var(--pylab-accent);
+:host{
+    display: block;
+    height: 80vh;
+    padding: 0px 15px;
 }
 
-.general-container {
-    height: 75vh;
-    padding: 0px 15px;
+.program-title{
+    margin: 15px;
+    color: var(--pylab-accent);
+    
+    button{
+        border: none; 
+        background-color: transparent;
+    }
 
     mat-icon{
         color: var(--pylab-accent);
     }
 }
 
-.grid-container {
+
+#program-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 10px;
     height: 100%;
 
-    .left,
-    .right-top,
-    .right-bottom {
-        border-radius: 10px;
-        border-radius: 10px;
-        background-color: white;
-        box-shadow: 0px 0px 4px rgba(var(--pylab-accent-rgb), 0.5);
+    .view-container{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 40vh;
     }
 }
 
-.right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
-    gap: 10px;
-}
+@media (max-width: 650px) {
+    .program-title{
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1em;
+    }
 
-.right-top {
-    height: 80%;
-}
-
-.right-bottom {
-    height: 20%;
+    #program-container {
+        grid-template-columns: 1fr;
+    }
 }

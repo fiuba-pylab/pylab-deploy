@@ -88,6 +88,8 @@ export function evaluate(code: any): any {
         return complex_evaluation(code)
     }
 
+    code = code.replace(/'false'/g, 'false');
+
     try {
         return eval(code);
     } catch (e) {

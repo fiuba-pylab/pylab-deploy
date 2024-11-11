@@ -7,6 +7,7 @@ import { Context } from "./context";
 import { DefStructure } from "./structure-def";
 import { StructureFactory } from "./structure-factory";
 import { v4 as uuidv4 } from 'uuid';
+import { Collection } from "./collection";
 
 export class Coordinator {
     structures: any[] = [];
@@ -131,7 +132,15 @@ export class Coordinator {
         newCoordinator.contexts = new Map<Context, { [key: string]: any }>(
           this.contexts.map((context) => {
             const clonedContext = context.clone();
-            const clonedVariables = this.variablesService.getVariables(clonedContext);
+            const clonedVariables: { [key: string]: any } = {};
+            const variables = this.variablesService.getVariables(context);
+            Object.keys(variables).forEach((key) => {
+                if(variables[key] instanceof Collection){
+                    clonedVariables[key] = variables[key].clone();
+                    return;
+                }
+                clonedVariables[key] = variables[key];
+            });
             return [clonedContext, { ...clonedVariables }];
           })
         );

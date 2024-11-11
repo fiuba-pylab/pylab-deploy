@@ -1,0 +1,12 @@
+frutas = {input('Ingrese conjunto de frutas: ')}
+
+hay_naranja = 'naranja' in frutas
+hay_ciruela = 'ciruela' in frutas
+print(f'{hay_naranja}')
+print(f'{hay_ciruela}')
+
+frutas |= {'ciruela'}
+frutas |= {'naranja'}
+frutas -= {'pera'}
+
+print(f'{frutas}')

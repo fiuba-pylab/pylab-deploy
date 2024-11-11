@@ -1,6 +1,6 @@
 CONSTANTE_FAHRENHEIT_A_CELSIUS = 32 
 CONSTANTE_CONVERSION = 5 / 9
-temp_fahrenheit = 60
+temp_fahrenheit = int(input("Ingrese la temperatura en grados Fahrenheit: "))
 temperatura_celsius = (temp_fahrenheit - CONSTANTE_FAHRENHEIT_A_CELSIUS) * CONSTANTE_CONVERSION
 if temperatura_celsius <= 0:
     estado = "Sólido (Hielo)"

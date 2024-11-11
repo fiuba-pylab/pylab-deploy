@@ -1,16 +1,16 @@
-<div class="general-container">
-    <h1>
-        {{title}}
-        <button mat-icon-button type="button" style="border: none; background-color: white;" (click)="openDialog(program)">
-            <mat-icon>info</mat-icon>
-          </button>
-    </h1>
-    
-    <div class="grid-container">
-            <app-code-view class="left" [inputs]="inputs" [code]="code"></app-code-view>
-        <section class="right">
-            <app-variable-view class="right-top"></app-variable-view>
-            <app-comments-view class="right-bottom"></app-comments-view>
-        </section>
-    </div>
+<h1 class="program-title">
+    {{title}}
+    <button mat-icon-button type="button"
+        (click)="openDialog(program)">
+        <mat-icon>info</mat-icon>
+    </button>
+</h1>
+
+<div id="program-container">
+    <app-code-view class="code-container
+    " [inputs]="inputs" [code]="code"></app-code-view>
+    <section class="view-container">
+        <app-variable-view class="variables"></app-variable-view>
+        <app-output-view class="output"></app-output-view>
+    </section>
 </div>

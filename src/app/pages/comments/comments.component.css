@@ -1,0 +1,30 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, auto));
+    gap: 10px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 5% 0 5%;
+    text-align: justify;
+    font-size: small;
+}
+
+.item1, .item3{
+    margin-top: 5% !important;
+}
+
+.item1 > .title {
+    margin: 0 0 10px 0;
+    background-color: rgba(var(--pylab-primary-rgb), 0.6);
+    width: 100%;
+    text-align: center;
+}
+
+.item3 > ul{
+    padding-left: 20px;
+}

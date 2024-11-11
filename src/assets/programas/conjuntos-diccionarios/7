@@ -1,0 +1,16 @@
+def fibonacci(n, memo = {}):
+    in_memo = n in memo
+    if in_memo:
+        valor = memo[n]
+        return valor
+    if n <= 1:
+        return n
+    fibo1 = fibonacci(n-1, memo)
+    fibo2 = fibonacci(n-2, memo)
+    memo[n] = fibo1 + fibo2
+    valor = memo[n]
+    return valor
+
+n = input('Ingrese número para realizar la sucesión de Fibonacci')
+fibo = fibonacci(n)
+print(f'El número de Fibonacci de {n} es: {fibo}')

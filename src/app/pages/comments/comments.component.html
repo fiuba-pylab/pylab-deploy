@@ -1,0 +1,10 @@
+<div class="grid-container">
+    <div class="grid-item item1">
+      <h1 class="title">{{ comment.title }}</h1>
+      <div *ngIf="comment.grid_1 != ''" [innerHTML]="comment.grid_1"></div>
+    </div>
+    <div class="grid-item item3" *ngIf="comment.grid_3 != ''" [innerHTML]="comment.grid_3"></div>
+    <div class="grid-item item2" *ngIf="comment.grid_2 != ''" [innerHTML]="comment.grid_2"></div>
+    <div class="grid-item item4" *ngIf="comment.grid_4 != ''" [innerHTML]="comment.grid_4"></div>
+</div>
+

@@ -1,2 +1,207 @@
 [
+    {
+        "id": 1,
+        "title": "Frutas y cantidades",
+        "description": "Uso de diccionario para contar la cantidad y variedad de frutas.",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> Dada una lista con frutas y sus cantidades, se utiliza un diccionario para saber la cantidad total de cada fruta que hay en esa lista. <br> <br> <h4> Casos:</h4> 1. Lista con 3 frutas: 8 manzanas, 6 bananas y 1 pera. <br> 2. Lista de 5 frutas: 8 manzanas, 6 bananas, 3 peras, 3 uvas y 1 anana. <br> 3. Lista con 7 frutas: 4 peras, 8 manzanas, 3 ananas, 1 naranja, 4 bananas, 2 uvas y 5 mandarinas.",
+        "inputs": [
+            {
+                "name": "frutas",
+                "options": [
+                    "'manzana 3', 'banana 2', 'manzana 5', 'pera 1', 'banana 4'",
+                    "'manzana 3', 'banana 2', 'manzana 5', 'pera 1', 'banana 4', 'pera 2', 'uva 3', 'anana 1'",
+                    "'pera 2', 'anana 2', 'manzana 5', 'naranja 1', 'banana 4', 'pera 2', 'manzana 3', 'uva 2', 'anana 1', 'mandarina 5'"
+                ]
+            }
+        ],
+        "comments": [
+            "listas",
+            "nativas",
+            "if",
+            "diccionarios",
+            "for"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Contiene palabras",
+        "description": "Agregamos palabras a un diccionario para luego iterarlo.",
+        "difficulty": 1,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario clave y valor para agregar al diccionario, hasta que el usuario ingrese 'BASTA'. Luego, se solicita al usuario otra clave y se le indica por pantalla si la misma pertenece o no al diccionario. <br> ",
+         "inputs": [
+            {
+                "name": "clave",
+                "options": [
+                    "FIUBA",
+                    "UBA",
+                    "FADU",
+                    "FDUBA",
+                    "BASTA"
+                ]
+            },
+            {
+                "name": "valor",
+                "options": [
+                    "1",
+                    "5",
+                    "3",
+                    "7",
+                    "10"
+                ]
+            }
+        ],
+        "comments": [
+            "while",
+            "nativas",
+            "diccionarios"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Operaciones con conjuntos",
+        "description": "Realizar distintas operaciones entre dos conjuntos.",
+        "difficulty": 2,
+        "introduction": "<h4>Objetivo:</h4> A partir de dos conjuntos ingresados por el usuario, se calcula la diferencia simétrica, asimétricas, unión e intersección y se muestran los resultados por pantalla. <br> <br> <h4>Casos:</h4> 1. Conjunto A = {1, 2, 3, 4, 5}, Conjunto B = {4, 5, 6, 7, 8} <br> 2. Conjunto A = {1, 2, 3, 4, 5}, Conjunto B = {6, 7, 8, 9, 10} <br> 3. Conjunto A = {1, 2, 3, 4, 5}, Conjunto B = {1, 2, 3, 4, 5} <br> 4. Conjunto A = {1, 2, 3, 4, 5}, Conjunto B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}",
+        "inputs": [
+            {
+                "name": "A",
+                "options": [
+                    "1, 2, 3, 4, 5"
+                ]
+            },
+            {
+                "name": "B",
+                "options": [
+                    "4, 5, 6, 7, 8",
+                    "6, 7, 8, 9, 10",
+                    "1, 2, 3, 4, 5",
+                    "1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+                ]
+            }
+        ],
+        "comments": [
+            "nativas",
+            "conjuntos"
+        ]
+    }, 
+    {
+        "id": 4,
+        "title": "Valores duplicados",
+        "description": "Identificar si una lista contiene valores duplicados usando un conjunto para almacenar valores únicos.",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Dada una lista de valores, determinar si la lista contiene valores duplicados. Para lograrlo, se usa un conjunto que almacena los valores únicos y se compara su longitud con la longitud de la lista original.<br><br><h4>Casos:</h4> 1. Lista con duplicados: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]. <br> 2. Lista sin duplicados: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]. <br> 3. Lista con duplicados: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].",
+        "inputs": [
+            {
+                "name": "lista",
+                "options": [
+                    "1, 2, 3, 4, 5, 1, 2, 3, 4, 5",
+                    "1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
+                    "1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+                ]
+            }
+        ],
+        "comments": [
+            "def",
+            "listas",
+            "if",
+            "nativas",
+            "conjuntos",
+            "for"
+        ]
+    }, 
+    {
+        "id": 5,
+        "title": "Operaciones con conjuntos 2",
+        "description": "Operaciones con conjuntos de frutas: verificar existencia, agregar y eliminar elementos en el conjunto.",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un conjunto de frutas para realizar varias operaciones como verificar la existencia de ciertos elementos, agregar nuevos elementos, y eliminar otros.<br><br><h4>Casos:</h4> 1. Conjunto con <b>ciruela</b>, <b>naranja</b> y <b>pera</b>: 'manzana, ciruela, pera, naranja, uva'.<br>2. Conjunto con <b>pera</b>: 'manzana, banana, pera, kiwi, uva'.<br>3. Conjunto con <b>pera</b> y <b>naranja</b>: 'manzana, pera, kiwi, uva, naranja'.",
+        "inputs": [
+            {
+                "name": "frutas",
+                "options": [
+                    "manzana, ciruela, pera, naranja, uva",
+                    "manzana, banana, pera, kiwi, uva",
+                    "manzana, pera, kiwi, uva, naranja"
+                ]
+            }
+        ],
+        "comments": [
+            "conjuntos",
+            "nativas"
+        ]
+    },    
+    {
+        "id": 6,
+        "title": "Contador de palabras",
+        "description": "Contar la cantidad de veces que aparece cada palabra en un texto usando un diccionario.",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un texto para contar las apariciones de cada palabra, utilizando un diccionario para almacenar la frecuencia de cada palabra. <br> <br> <h4>Casos:</h4> 1. Solo una palabra se repite: 'El perro come comida, el gato come pescado'. <br> 2. Dos palabras se repiten: 'Mi perro come carne, el perro de mi vecino come pollo'. <br> 3. Cuatro palabras repetidas: 'Mi perro come carne, el perro de mi vecino come pollo, el gato de mi hermano no come ni carne ni pollo'. <br> 4. Sin palabras repetidas: 'Mi perro come carne'.",
+        "inputs": [
+            {
+                "name": "texto",
+                "options": [
+                    "El perro come comida, el gato come pescado",
+                    "Mi perro come carne, el perro de mi vecino come pollo",
+                    "Mi perro come carne, el perro de mi vecino come pollo, el gato de mi hermano no come ni carne ni pollo",
+                    "Mi perro come carne"
+                ]
+            }
+        ],
+        "comments": [
+            "diccionarios",
+            "if",
+            "nativas",
+            "for"
+        ]
+    },     
+    {
+        "id": 7,
+        "title": "Fibonacci con memorización",
+        "description": "Calcular el n-ésimo término de la sucesión de Fibonacci con memorización.",
+        "difficulty": 4,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número y calcular el n-ésimo término de la sucesión de Fibonacci utilizando memorización. La memorización es una técnica que consiste en almacenar los resultados de cálculos previos para evitar repetirlos. En este caso, se usa un diccionario para almacenar los valores de Fibonacci ya calculados y mejorar la eficiencia evitando cálculos redundantes.<br><br><h4>Casos:</h4> 1. Para n = 5, el resultado debe ser 5.<br>2. Para n = 10, el resultado debe ser 55.<br>3. Para n = 15, el resultado debe ser 610.<br>4. Para n = 20, el resultado debe ser 6765.",
+        "inputs": [
+            {
+                "name": "n",
+                "options": [
+                    "5",
+                    "10",
+                    "15",
+                    "20"
+                ]
+            }
+        ],
+        "comments": [
+            "if",
+            "def",
+            "diccionarios",
+            "nativas"
+        ]
+    },     
+    {
+        "id": 8,
+        "title": "Secuencia Collatz",
+        "description": "Calcular la secuencia de Collatz para un número dado.",
+        "difficulty": 3,
+        "introduction": "<h4>Objetivo:</h4> Solicitar al usuario un número y calcular la secuencia de Collatz para ese número. La secuencia de Collatz es una sucesión de números generada a partir de un número inicial n, siguiendo las siguientes reglas:<br>- Si n es par, el siguiente número es n/2.<br>- Si n es impar, el siguiente número es 3n + 1.<br>La secuencia termina cuando llega a 1. En este ejercicio, calculamos la secuencia de Collatz para un número dado y contamos la cantidad de términos generados hasta llegar a 1.<br><br><h4>Casos:</h4> 1. Para n = 5, la secuencia debe ser {5, 16, 8, 4, 2, 1}.<br>2. Para n = 10, la secuencia debe ser {10, 5, 16, 8, 4, 2, 1}.<br>3. Para n = 15, la secuencia debe ser {15, 46, 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1}.<br>4. Para n = 20, la secuencia debe ser {20, 10, 5, 16, 8, 4, 2, 1}.",
+        "inputs": [
+            {
+                "name": "n",
+                "options": [
+                    "5",
+                    "10",
+                    "15",
+                    "20"
+                ]
+            }
+        ],
+        "comments": [
+            "nativas",
+            "while",
+            "if",
+            "conjuntos"
+        ]
+    }    
+
 ]

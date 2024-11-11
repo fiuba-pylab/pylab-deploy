@@ -11,7 +11,7 @@ import { SvgComponent } from '../../components/svg/svg.component';
   standalone: true,
   imports: [CommonModule, MatCardModule, MatIconModule, MatButtonModule, SvgComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   constructor(private router: Router) {
