@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pylab-deploy": {
+    "pylab-test": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,7 +17,7 @@
               ".ttf": "binary"
             },
             "outputPath": {
-              "base": "dist/pylab-deploy",
+              "base": "dist/pylab-test",
               "browser": ""
             },
             "index": "src/index.html",
@@ -43,7 +43,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/pylab/",
+              "baseHref": "/pylab-test/",
               "budgets": [
                 {
                   "type": "initial",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pylab-deploy:build:production"
+              "buildTarget": "pylab-test:build:production"
             },
             "development": {
-              "buildTarget": "pylab-deploy:build:development"
+              "buildTarget": "pylab-test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "pylab-deploy:build"
+            "buildTarget": "pylab-test:build"
           }
         },
         "test": {
