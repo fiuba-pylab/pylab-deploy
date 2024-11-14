@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "loader":{
+            "loader": {
               ".ttf": "binary"
             },
             "outputPath": {
@@ -43,6 +43,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/pylab/",
               "budgets": [
                 {
                   "type": "initial",

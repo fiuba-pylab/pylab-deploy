@@ -20,7 +20,7 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build
-        run: ng build --configuration=production --base-href /pylab-deploy/
+        run: ng build --configuration=production --base-href /pylab/
 
       - name: Configure Git
         run: |
