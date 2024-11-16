@@ -8,7 +8,7 @@ if metodo_pago == 'efectivo':
       costo_total = costo_base * 0.90
    else:
        costo_total = costo_base
-elif metodo_pago == 'qr':
+elif metodo_pago == 'QR':
     if cantidad <= 20:
        costo_total = costo_base * 1.15
     else:
