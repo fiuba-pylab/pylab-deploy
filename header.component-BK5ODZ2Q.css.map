@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/layout/header/header.component.css"],
+  "sourcesContent": [".spacer {\n    flex: 1 1 auto;\n}\n\nimg{\n    width: 6rem;\n}"],
+  "mappings": "AAAA,CAAC,OACG,KAAM,EAAE,EAAE,IACd,CAEA,IACI,MAAO,IACX",
+  "names": []
+}

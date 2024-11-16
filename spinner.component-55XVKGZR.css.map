@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/spinner/spinner.component.scss"],
+  "sourcesContent": [".mat-spinner-color::ng-deep circle{\n    stroke: var(--primary-color) !important;\n}\n\n#spinner{\n    margin: 5rem auto;\n}"],
+  "mappings": "AAAA,CAAA,iBAAA,UAAA,OACI,OAAA,IAAA,2BAGJ,CAAA,QAJA,OAKI,KAAA",
+  "names": []
+}

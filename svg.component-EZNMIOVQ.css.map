@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/svg/svg.component.css"],
+  "sourcesContent": ["svg{\n    width: 10rem;\n}"],
+  "mappings": "AAAA,IACI,MAAO,KACX",
+  "names": []
+}

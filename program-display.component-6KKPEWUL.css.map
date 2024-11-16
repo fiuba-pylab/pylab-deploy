@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/program-display/program-display.component.scss"],
+  "sourcesContent": [":host{\n    display: block;\n    height: 80vh;\n    padding: 0px 15px;\n}\n\n.program-title{\n    margin: 15px;\n    color: var(--pylab-accent);\n    \n    button{\n        border: none; \n        background-color: transparent;\n    }\n\n    mat-icon{\n        color: var(--pylab-accent);\n    }\n}\n\n\n#program-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: 1fr;\n    gap: 10px;\n    height: 100%;\n\n    .view-container{\n        overflow: hidden;\n        display: flex;\n        flex-direction: column;\n        min-height: 40vh;\n    }\n}\n\n@media (max-width: 650px) {\n    .program-title{\n        font-size: 1em;\n        display: flex;\n        align-items: center;\n        gap: 10px;\n        font-size: 1em;\n    }\n\n    #program-container {\n        grid-template-columns: 1fr;\n    }\n}"],
+  "mappings": "AAAA,MACI,QAAA,MACA,OAAA,KAFJ,QAGI,EAAA,KAGJ,CAAA,cANA,OAOI,KACA,MAAA,IAAA,gBAEA,CAJJ,cAII,OACI,OAAA,KACA,iBAAA,YAGJ,CATJ,cASI,SACI,MAAA,IAAA,gBAKR,CAAA,kBACI,QAAA,KACA,sBAAA,IAAA,IACA,mBAAA,IACA,IAAA,KACA,OAAA,KAEA,CAPJ,kBAOI,CAAA,eACI,SAAA,OACA,QAAA,KACA,eAAA,OACA,WAAA,KAIR,OAAA,CAAA,SAAA,EAAA,OACI,CA/BJ,cAiCQ,QAAA,KACA,YAAA,OACA,IAAA,KACA,UAAA,IAGJ,CAxBJ,kBAyBQ,sBAAA",
+  "names": []
+}

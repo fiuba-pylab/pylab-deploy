@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/comments/comments.component.css"],
+  "sourcesContent": [".grid-container {\n    display: grid;\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n    grid-template-rows: repeat(2, minmax(0, auto));\n    gap: 10px;\n}\n\n.grid-item {\n    display: flex;\n    align-items: flex-start;\n    flex-direction: column;\n    margin: 0 5% 0 5%;\n    text-align: justify;\n    font-size: small;\n}\n\n.item1, .item3{\n    margin-top: 5% !important;\n}\n\n.item1 > .title {\n    margin: 0 0 10px 0;\n    background-color: rgba(var(--pylab-primary-rgb), 0.6);\n    width: 100%;\n    text-align: center;\n}\n\n.item3 > ul{\n    padding-left: 20px;\n}"],
+  "mappings": "AAAA,CAAC,eACG,QAAS,KACT,sBAAuB,OAAO,CAAC,CAAE,OAAO,CAAC,CAAE,MAC3C,mBAAoB,OAAO,CAAC,CAAE,OAAO,CAAC,CAAE,OACxC,IAAK,IACT,CAEA,CAAC,UACG,QAAS,KACT,YAAa,WACb,eAAgB,OAVpB,OAWY,EAAE,GACV,WAAY,QACZ,UAAW,KACf,CAEA,CAAC,MAAO,CAAC,MACL,WAAY,YAChB,CAEA,CAJC,KAIM,CAAE,CAAC,MApBV,OAqBY,EAAE,EAAE,KACZ,iBAAkB,KAAK,IAAI,oBAAoB,CAAE,IACjD,MAAO,KACP,WAAY,MAChB,CAEA,CAXS,KAWF,CAAE,GACL,aAAc,IAClB",
+  "names": []
+}

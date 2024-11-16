@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/layout/layout.component.css"],
+  "sourcesContent": ["mat-sidenav-container{\n    height: calc(100vh - 64px);\n}\n\n.item{\n    align-items: center;\n    color: var(--pylab-accent);\n\n}\n\nmat-icon {\n    vertical-align: middle;\n    color: var(--pylab-accent);\n}"],
+  "mappings": "AAAA,sBACI,OAAQ,KAAK,MAAM,EAAE,KACzB,CAEA,CAAC,KACG,YAAa,OACb,MAAO,IAAI,eAEf,CAEA,SACI,eAAgB,OAChB,MAAO,IAAI,eACf",
+  "names": []
+}

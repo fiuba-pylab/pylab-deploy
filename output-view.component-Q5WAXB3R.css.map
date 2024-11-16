@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/output-view/output-view.component.css"],
+  "sourcesContent": [":host{\n    display: block;\n    height: 25%;\n    margin: 10px;\n    border-radius: 10px;\n    box-shadow: 0px 0px 4px rgba(64, 64, 63, 0.5);\n    overflow: hidden;\n}\n\n#output{\n    margin: 5px;\n    padding: 5px;\n    word-wrap: break-word;\n    font-size: 0.9em;\n    overflow: auto;\n    max-height: 100%;\n    width: 100%;\n}"],
+  "mappings": "AAAA,MACI,QAAS,MACT,OAAQ,IAFZ,OAGY,KAHZ,cAImB,KACf,WAAY,EAAI,EAAI,IAAI,UACxB,SAAU,MACd,CAEA,CAAC,OATD,OAUY,IAVZ,QAWa,IACT,UAAW,WACX,UAAW,KACX,SAAU,KACV,WAAY,KACZ,MAAO,IACX",
+  "names": []
+}

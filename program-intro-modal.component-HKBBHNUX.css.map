@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/program-display/program-intro-modal/program-intro-modal.component.css"],
+  "sourcesContent": [".x-close {\n    cursor: pointer;\n}\n\n.header{\n    padding: 20px 20px 0px 20px;\n    color: var(--pylab-accent);\n\n}\n\n.intro-container{\n    padding: 0px 20px 20px 20px;\n/*     max-height: 50vh;\n    min-height: 50vh;\n    max-width: 60vw;\n    min-width: 60vw; */\n    overflow: hidden;\n    display: flex;\n    flex-direction: column;\n}\n\n.information{\n    overflow: auto;\n    text-align: justify;\n    padding-right: 15px;\n    color: var(--pylab-accent);\n}\n\n.header{\n    display: flex; \n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 20px;\n}\n\nh2{\n    padding: 0px;\n}"],
+  "mappings": "AAAA,CAAC,QACG,OAAQ,OACZ,CAEA,CAAC,OAJD,QAKa,KAAK,KAAK,EACnB,MAAO,IAAI,eAEf,CAEA,CAAC,gBAVD,QAWa,EAAI,KAAK,KAKlB,SAAU,OACV,QAAS,KACT,eAAgB,MACpB,CAEA,CAAC,YACG,SAAU,KACV,WAAY,QACZ,cAAe,KACf,MAAO,IAAI,eACf,CAEA,CAxBC,OAyBG,QAAS,KACT,gBAAiB,cACjB,YAAa,OACb,cAAe,IACnB,CAEA,GAnCA,QAoCa,CACb",
+  "names": []
+}

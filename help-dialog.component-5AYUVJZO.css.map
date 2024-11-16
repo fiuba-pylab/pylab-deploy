@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/help-dialog/help-dialog.component.css"],
+  "sourcesContent": [".help-dialog-container{\n    padding: 20px;\n    max-height: 50vh;\n    max-width: 60vw;\n    min-width: 60vw;\n}\n\n.x-close {\n    cursor: pointer;\n}\n\n.header{\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    color: var(--pylab-accent);\n}\n\nh3{\n    margin: 10px 0px;\n    color: var(--pylab-primary);\n}\n\np{\n    text-align: justify;\n    color: var(--pylab-accent);\n    line-height: 25px;\n}\n\n.help{\n    margin: 10px 0px;\n    padding: 10px 0px 20px 0px;\n}"],
+  "mappings": "AAAA,CAAC,sBAAD,QACa,KACT,WAAY,KACZ,UAAW,KACX,UAAW,IACf,CAEA,CAAC,QACG,OAAQ,OACZ,CAEA,CAAC,OACG,QAAS,KACT,YAAa,OACb,gBAAiB,cACjB,MAAO,IAAI,eACf,CAEA,GAlBA,OAmBY,KAAK,EACb,MAAO,IAAI,gBACf,CAEA,EACI,WAAY,QACZ,MAAO,IAAI,gBACX,YAAa,IACjB,CAEA,CAAC,KA7BD,OA8BY,KAAK,EA9BjB,QA+Ba,KAAK,EAAI,IACtB",
+  "names": []
+}
