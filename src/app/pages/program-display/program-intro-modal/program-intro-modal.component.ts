@@ -1,10 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, Inject, inject, OnInit } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { MatChip, MatChipsModule } from '@angular/material/chips';
@@ -26,7 +26,7 @@ export class ProgramIntroModalComponent implements OnInit{
   forms:ResponseForm[] = []
   data = inject(MAT_DIALOG_DATA);
 
-  constructor(public dialog: MatDialogRef<ProgramIntroModalComponent>, private router: Router){
+  constructor(@Inject(DOCUMENT) private document: Document, public dialog: MatDialogRef<ProgramIntroModalComponent>, private router: Router){
 
   }
   ngOnInit(): void {
@@ -40,9 +40,10 @@ export class ProgramIntroModalComponent implements OnInit{
     this.dialog.close(false)
   }
 
-  goTo(url:string){
+  goTo(url: string) {
     this.dialog.close(false);
-    this.router.navigate(['/info', url]);
+    const baseHref = this.document.getElementsByTagName('base')[0]?.href || '/';
+    window.open(`${baseHref}info/${url}`, '_blank');
   }
 
 }
